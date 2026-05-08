@@ -1,0 +1,4015 @@
+{
+  "generated_at": "2026-05-08",
+  "purpose": "A curated, validated catalogue of manageable datasets for data exploration projects. Built for both human browsing and AI-agent handoff.",
+  "validation_summary": {
+    "raw_suggestions": 80,
+    "catalogued_datasets": 100,
+    "deduped_or_corrected": [
+      "HM Land Registry Price Paid Data appeared twice and was merged.",
+      "STATS19 road safety appeared twice and was merged.",
+      "Eurostat regional statistics appeared twice and was merged.",
+      "English Indices of Deprivation generic and 2025 links were merged.",
+      "Tate Collection Metadata appeared twice and was merged.",
+      "Food Hygiene Ratings appeared twice and was merged.",
+      "Old The Pudding GitHub owner links were corrected from thepudding to the-pudding.",
+      "IPSA moved from the suggested annual-publications URL to the current MP staffing/business costs publication page.",
+      "Eurovision was switched from a stale GitHub link to a currently reachable Eurovision dataset source."
+    ],
+    "strict_open_download_pass": {
+      "date": "2026-05-08",
+      "criteria": "Keep only datasets with an openly downloadable CSV/XLS/XLSX/ODS/JSON/GeoJSON file, a ZIP of standard files, or an unauthenticated endpoint. Drop login, API key, account-gated, search-only, and specialist-primary-format datasets.",
+      "original_catalogued_datasets": 75,
+      "kept_datasets": 59,
+      "removed_datasets": [
+        {
+          "id": "acled",
+          "title": "Armed Conflict Location & Event Data",
+          "reason": "Requires myACLED account/API token/export workflow."
+        },
+        {
+          "id": "american-time-use",
+          "title": "American Time Use Survey",
+          "reason": "BLS ZIP endpoint returned 403 from agent fetch path during strict validation, so it is not reliable for open agent download."
+        },
+        {
+          "id": "boardgamegeek",
+          "title": "BoardGameGeek Database",
+          "reason": "Kaggle/account source; no qualifying unauthenticated direct file found for this rich dataset."
+        },
+        {
+          "id": "desert-island-discs",
+          "title": "BBC Desert Island Discs Castaways",
+          "reason": "Concrete XLSX endpoint returned 403/202 in unauthenticated probes."
+        },
+        {
+          "id": "epc-england-wales",
+          "title": "Energy Performance Certificate Data - England & Wales",
+          "reason": "Requires GOV.UK One Login or API sign-up/key for bulk access."
+        },
+        {
+          "id": "fingertips",
+          "title": "Fingertips Public Health Profiles",
+          "reason": "Public health CSV endpoint timed out repeatedly from the agent fetch path during strict validation."
+        },
+        {
+          "id": "global-terrorism-db",
+          "title": "Global Terrorism Database",
+          "reason": "Official access requires terms/form/EULA route."
+        },
+        {
+          "id": "haduk-grid",
+          "title": "Met Office HadUK-Grid Climate Observations",
+          "reason": "Primary download is NetCDF, outside the simple-format bar."
+        },
+        {
+          "id": "met-office-stations",
+          "title": "UK Met Office Historic Station Data",
+          "reason": "Primary station files are plain text tables, not CSV/XLS/XLSX/ODS/JSON/GeoJSON."
+        },
+        {
+          "id": "nbn-atlas",
+          "title": "NBN Atlas Species Occurrence Data",
+          "reason": "Occurrence downloads require login and licence acceptance."
+        },
+        {
+          "id": "openaq",
+          "title": "OpenAQ Air Quality Data",
+          "reason": "Current API requires an API key."
+        },
+        {
+          "id": "openprescribing",
+          "title": "OpenPrescribing",
+          "reason": "Could not validate a stable unauthenticated CSV/JSON endpoint; Cloudflare challenge blocked access."
+        },
+        {
+          "id": "priority-habitats",
+          "title": "Natural England Priority Habitats Inventory",
+          "reason": "GeoJSON ZIP is roughly 1.3GB, above the catalogue size rule and too easy to trigger as an accidental large download."
+        },
+        {
+          "id": "space-launches-gcat",
+          "title": "Global Space Launches",
+          "reason": "Direct file is TSV/fixed text, outside the allowed format bar."
+        },
+        {
+          "id": "tidytuesday",
+          "title": "TidyTuesday Repository",
+          "reason": "Meta-repository requiring manual dataset selection, not one dataset file/endpoint."
+        },
+        {
+          "id": "ucl-lbs",
+          "title": "UCL Legacies of British Slavery Database",
+          "reason": "Searchable HTML database, no supported direct CSV/XLS/JSON bulk/API route found."
+        }
+      ]
+    },
+    "additional_search_passes": [
+      {
+        "date": "2026-05-08",
+        "proposed_items": 60,
+        "unique_candidate_groups_after_dedupe": 46,
+        "added_datasets": 45,
+        "rejected_groups": [
+          {
+            "id": "bls-laus",
+            "title": "BLS Local Area Unemployment Statistics Time Series",
+            "reason": "Direct download path was blocked in Chrome and returned 403 via curl, despite one Node fetch path succeeding."
+          }
+        ],
+        "merged_or_deduplicated": [
+          "EPA Annual AQI repeated across batches and was merged into one entry with 2024 and 2025 links.",
+          "USGS Earthquake all-month and 2.5+ feeds were merged into one entry.",
+          "USGS instantaneous and daily water services were merged into one entry.",
+          "Natural Earth 10m and 110m country boundaries were merged into one entry.",
+          "CDC PLACES county/place suggestions were merged into one entry.",
+          "CDC Chronic Disease Indicators repeated across batches and was merged.",
+          "NASA Exoplanet Archive suggestions were merged into one filtered TAP entry.",
+          "SSA national and state baby-name files were merged into one entry."
+        ],
+        "validation": "Direct links were probed with HEAD/GET without full large downloads; representative source pages and the final catalogue were checked in Chrome."
+      }
+    ],
+    "curation_trims": [
+      {
+        "date": "2026-05-08",
+        "target_count": 100,
+        "removed_datasets": [
+          {
+            "id": "cdc-nutrition-obesity",
+            "title": "CDC Nutrition, Physical Activity and Obesity Indicators",
+            "reason": "Dropped in curation trim to 100: overlaps heavily with CDC PLACES and CDC Chronic Disease Indicators."
+          },
+          {
+            "id": "fred-unrate",
+            "title": "FRED U.S. Unemployment Rate",
+            "reason": "Dropped in curation trim to 100: too small and thin as a standalone student exercise."
+          },
+          {
+            "id": "natural-earth-admin0",
+            "title": "Natural Earth Admin 0 Countries",
+            "reason": "Dropped in curation trim to 100: useful map reference layer, but too small and not story-rich by itself."
+          },
+          {
+            "id": "us-census-tiger-counties",
+            "title": "U.S. Census TIGER/Line County Boundaries",
+            "reason": "Dropped in curation trim to 100: useful boundary plumbing, but not a strong standalone exploration dataset."
+          }
+        ]
+      }
+    ],
+    "category_review": {
+      "date": "2026-05-08",
+      "previous_categories": 7,
+      "new_categories": 12,
+      "rationale": "Rebalanced overloaded transport, environment and culture buckets into shorter, clearer categories for student browsing.",
+      "counts": {
+        "people-places": 11,
+        "transit-travel": 14,
+        "public-safety": 10,
+        "homes-cities": 8,
+        "weather-hazards": 8,
+        "nature-science": 5,
+        "energy-emissions": 5,
+        "work-trade": 6,
+        "money-organisations": 6,
+        "health-food": 7,
+        "arts-archives": 9,
+        "culture-leisure": 11
+      }
+    }
+  },
+  "categories": [
+    {
+      "id": "people-places",
+      "title": "People & Places",
+      "description": "Demographic, boundary and migration datasets for comparing populations and places."
+    },
+    {
+      "id": "transit-travel",
+      "title": "Transit & Travel",
+      "description": "Movement, transport-service and travel datasets with routes, trips, stations or vehicles."
+    },
+    {
+      "id": "public-safety",
+      "title": "Public Safety",
+      "description": "Crime, crashes, emergency, disaster and conflict datasets about public risk and response."
+    },
+    {
+      "id": "homes-cities",
+      "title": "Homes & Cities",
+      "description": "Housing, planning, urban services and built-environment datasets."
+    },
+    {
+      "id": "weather-hazards",
+      "title": "Weather & Hazards",
+      "description": "Weather, water, air-quality and natural-hazard datasets with strong time or map stories."
+    },
+    {
+      "id": "nature-science",
+      "title": "Nature & Science",
+      "description": "Biodiversity, forestry, meteorite and astronomy datasets for scientific exploration."
+    },
+    {
+      "id": "energy-emissions",
+      "title": "Energy & Emissions",
+      "description": "Electricity, energy-system and emissions datasets."
+    },
+    {
+      "id": "work-trade",
+      "title": "Work & Trade",
+      "description": "Jobs, productivity, wages, trade, agriculture and local industry datasets."
+    },
+    {
+      "id": "money-organisations",
+      "title": "Money & Organisations",
+      "description": "Companies, charities, finance, spending and institutional datasets."
+    },
+    {
+      "id": "health-food",
+      "title": "Health & Food",
+      "description": "Health, nutrition, food safety and food-access datasets."
+    },
+    {
+      "id": "arts-archives",
+      "title": "Arts & Archives",
+      "description": "Museum, archive, historical and heritage datasets."
+    },
+    {
+      "id": "culture-leisure",
+      "title": "Culture & Leisure",
+      "description": "Music, media, games, restaurants, hobbies and playful cultural datasets."
+    }
+  ],
+  "datasets": [
+    {
+      "id": "census-2021-bulk",
+      "title": "Census 2021 Bulk Data via Nomis",
+      "category": "people-places",
+      "description": "England and Wales small-area demographic tables from Census 2021.",
+      "story_ideas": [
+        "Age and household profiles",
+        "Tenure and commuting patterns",
+        "Small-area population maps"
+      ],
+      "source": "https://www.nomisweb.co.uk/census/2021/bulk",
+      "links": [
+        {
+          "label": "Nomis Census 2021 bulk",
+          "url": "https://www.nomisweb.co.uk/census/2021/bulk"
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "CSV",
+        "Metadata",
+        "Nomis API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with TS001 usual resident population ZIP (ZIP of CSV).",
+      "size": "Topic ZIPs vary but are generally manageable; the full catalogue is broad.",
+      "license": "Open Government Licence / Nomis terms.",
+      "validation": "Reachable/current via Nomis bulk download and API routes.",
+      "caveats": "Census disclosure control applies; original and added geographies are separated.",
+      "download_links": [
+        {
+          "label": "TS001 usual resident population ZIP",
+          "url": "https://www.nomisweb.co.uk/output/census/2021/census2021-ts001.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "census-2021-od",
+      "title": "Census 2021 Origin-Destination Flows",
+      "category": "people-places",
+      "description": "Movement tables for work, migration and second addresses in England and Wales.",
+      "story_ideas": [
+        "Commuter networks",
+        "Town-region dependencies",
+        "Remote-work-era caveats"
+      ],
+      "source": "https://www.nomisweb.co.uk/sources/census_2021_od",
+      "links": [
+        {
+          "label": "Nomis OD source",
+          "url": "https://www.nomisweb.co.uk/sources/census_2021_od"
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "CSV",
+        "XLS metadata",
+        "Nomis API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with OD workplace flow package ZIP (ZIP of CSV).",
+      "size": "Small tables are KB-MB; the workplace package is roughly hundreds of MB.",
+      "license": "Open Government Licence / Nomis terms.",
+      "validation": "Reachable/current through Nomis OD pages.",
+      "caveats": "Census Day 2021 occurred during COVID restrictions; detailed OD may require safeguarded access.",
+      "download_links": [
+        {
+          "label": "OD workplace flow package ZIP",
+          "url": "https://www.nomisweb.co.uk/output/census/2021/odwp01ew.zip",
+          "format": "ZIP of CSV"
+        },
+        {
+          "label": "OD migration package ZIP",
+          "url": "https://www.nomisweb.co.uk/output/census/2021/odmg01ew.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "english-imd-2025",
+      "title": "English Indices of Deprivation 2025",
+      "category": "people-places",
+      "description": "Official relative deprivation rankings for small areas in England across multiple domains.",
+      "story_ideas": [
+        "Inequality maps",
+        "City deprivation profiles",
+        "Domain-by-domain comparison"
+      ],
+      "source": "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025",
+      "links": [
+        {
+          "label": "GOV.UK IMD 2025",
+          "url": "https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "Excel",
+        "GeoPackage",
+        "Shapefile"
+      ],
+      "access": "Use the protected download links in this catalogue; start with All ranks scores deciles CSV (CSV).",
+      "size": "Small to moderate; LSOA tables cover 33,755 areas.",
+      "license": "Open Government Licence.",
+      "validation": "Reachable/current 2025 release.",
+      "caveats": "Ranks are relative, not absolute; not directly comparable with Scotland, Wales or Northern Ireland indices.",
+      "download_links": [
+        {
+          "label": "All ranks scores deciles CSV",
+          "url": "https://assets.publishing.service.gov.uk/media/691ded56d140bbbaa59a2a7d/File_7_IoD2025_All_Ranks_Scores_Deciles_Population_Denominators.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "IMD index XLSX",
+          "url": "https://assets.publishing.service.gov.uk/media/691dece32c6b98ecdbc500d5/File_1_IoD2025_Index_of_Multiple_Deprivation.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "eurostat-regional",
+      "title": "Eurostat Regional Statistics by NUTS Region",
+      "category": "people-places",
+      "description": "EU regional data on population, labour, economy, health, environment and more.",
+      "story_ideas": [
+        "Regional inequality maps",
+        "NUTS clustering",
+        "UK-Europe context"
+      ],
+      "source": "https://ec.europa.eu/eurostat/web/regions/database",
+      "links": [
+        {
+          "label": "Eurostat regions database",
+          "url": "https://ec.europa.eu/eurostat/web/regions/database"
+        },
+        {
+          "label": "API getting started",
+          "url": "https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started/api"
+        }
+      ],
+      "formats": [
+        "JSON-stat",
+        "TSV",
+        "CSV-style bulk",
+        "API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Eurostat JSON-stat API example (JSON-stat API).",
+      "size": "Manageable when filtered; broad regional tables can get large.",
+      "license": "Eurostat reuse policy.",
+      "validation": "Reachable/current official EU data and API docs.",
+      "caveats": "NUTS versions change; keep the boundary year explicit.",
+      "download_links": [
+        {
+          "label": "Eurostat JSON-stat API example",
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_r_pjanaggr3?geo=FR10&time=2024&sex=T&unit=NR&age=TOTAL&lang=en",
+          "format": "JSON-stat API"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "geonames-cities500",
+      "title": "GeoNames Cities500 Gazetteer",
+      "category": "people-places",
+      "description": "Global populated-place gazetteer with coordinates, feature codes, population and country/admin identifiers for places above 500 residents.",
+      "story_ideas": [
+        "Global city-size curves",
+        "Settlement density by country",
+        "Place-name variants"
+      ],
+      "source": "https://download.geonames.org/export/dump/",
+      "links": [
+        {
+          "label": "GeoNames dump directory",
+          "url": "https://download.geonames.org/export/dump/"
+        }
+      ],
+      "formats": [
+        "ZIP of TSV"
+      ],
+      "access": "Use the protected ZIP and parse the tab-delimited UTF-8 text using the GeoNames README field order.",
+      "size": "About 13MB zipped.",
+      "license": "Creative Commons Attribution 4.0.",
+      "validation": "Direct ZIP returned application/zip with expected content length.",
+      "caveats": "Population and administrative fields can lag official sources; alternative names need careful handling.",
+      "download_links": [
+        {
+          "label": "Cities500 ZIP",
+          "url": "https://download.geonames.org/export/dump/cities500.zip",
+          "format": "ZIP of TSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "irs-migration",
+      "title": "IRS County-to-County Migration Data",
+      "category": "people-places",
+      "description": "U.S. tax-filer migration flows between counties and states, useful for origin-destination movement stories.",
+      "story_ideas": [
+        "County migration winners and losers",
+        "Metro-to-rural outflows",
+        "Retirement migration maps"
+      ],
+      "source": "https://www.irs.gov/statistics/soi-tax-stats-migration-data",
+      "links": [
+        {
+          "label": "IRS migration data",
+          "url": "https://www.irs.gov/statistics/soi-tax-stats-migration-data"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "ZIP of CSV"
+      ],
+      "access": "Use a single county inflow/outflow CSV for a focused story or the full ZIP for all migration tables.",
+      "size": "Full ZIP about 14MB; individual CSVs are smaller.",
+      "license": "U.S. federal public data.",
+      "validation": "Direct IRS CSV and ZIP links returned data with expected content types.",
+      "caveats": "Tax-filer based; young, low-income and non-filing populations are underrepresented.",
+      "download_links": [
+        {
+          "label": "County outflow 2021-2022 CSV",
+          "url": "https://www.irs.gov/pub/irs-soi/countyoutflow2122.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Full migration 2021-2022 ZIP",
+          "url": "https://www.irs.gov/pub/irs-soi/2122migrationdata.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "nomis-aps",
+      "title": "Nomis Annual Population Survey / Labour Market Data",
+      "category": "people-places",
+      "description": "Quarterly survey-based local labour-market estimates for employment, unemployment, qualifications, industry and occupation.",
+      "story_ideas": [
+        "Local labour-market dashboards",
+        "Regional skills comparison",
+        "Employment cluster analysis"
+      ],
+      "source": "https://www.nomisweb.co.uk/sources/aps",
+      "links": [
+        {
+          "label": "Nomis APS",
+          "url": "https://www.nomisweb.co.uk/sources/aps"
+        }
+      ],
+      "formats": [
+        "Nomis API",
+        "CSV",
+        "JSON",
+        "Excel",
+        "SDMX"
+      ],
+      "access": "Use the protected download links in this catalogue; start with APS Nomis CSV API example (CSV API).",
+      "size": "Manageable when filtered by topic and area.",
+      "license": "Nomis / ONS open data terms.",
+      "validation": "Reachable/current; updated quarterly.",
+      "caveats": "Survey estimates are not counts; small groups can be suppressed or unreliable.",
+      "download_links": [
+        {
+          "label": "APS Nomis CSV API example",
+          "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_17_1.data.csv?geography=2092957697&cell=402719489&measures=20100&time=latest",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "oecd-regional-wellbeing",
+      "title": "OECD Regional Well-Being",
+      "category": "people-places",
+      "description": "Regional scores across income, jobs, housing, health, access, environment, education, safety, civic engagement, community and life satisfaction.",
+      "story_ideas": [
+        "Regional radar charts",
+        "Well-being clustering",
+        "Quality-of-life comparisons"
+      ],
+      "source": "https://www.oecdregionalwellbeing.org/",
+      "links": [
+        {
+          "label": "OECD Regional Well-Being",
+          "url": "https://www.oecdregionalwellbeing.org/"
+        },
+        {
+          "label": "OECD tool page",
+          "url": "https://www.oecd.org/en/data/tools/oecd-regional-well-being.html"
+        }
+      ],
+      "formats": [
+        "Downloadable tables",
+        "OECD API/CSV-style routes"
+      ],
+      "access": "Use the protected download links in this catalogue; start with OECD Regional Well-Being XLSX (XLSX).",
+      "size": "Small: hundreds of regions across 11 topics.",
+      "license": "OECD terms.",
+      "validation": "Reachable/current OECD page.",
+      "caveats": "Constructed scores; visible site content update may lag.",
+      "download_links": [
+        {
+          "label": "OECD Regional Well-Being XLSX",
+          "url": "https://www.oecdregionalwellbeing.org/assets/downloads/OECD-Regional-Well-Being-Data-File.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "ons-open-geography",
+      "title": "ONS Open Geography Portal Boundaries",
+      "category": "people-places",
+      "description": "Official UK statistical geography boundary files for joining area-code datasets to maps.",
+      "story_ideas": [
+        "Choropleth base layers",
+        "LSOA or ward joins",
+        "Boundary-change comparison"
+      ],
+      "source": "https://geoportal.statistics.gov.uk/",
+      "links": [
+        {
+          "label": "Open Geography Portal",
+          "url": "https://geoportal.statistics.gov.uk/"
+        }
+      ],
+      "formats": [
+        "Shapefile",
+        "GeoJSON",
+        "GeoPackage",
+        "CSV metadata"
+      ],
+      "access": "Use the protected download links in this catalogue; start with LSOA 2021 boundaries GeoJSON (GeoJSON).",
+      "size": "Usually manageable by geography; national small-area layers need spatial tooling.",
+      "license": "Open Government Licence where stated on each item.",
+      "validation": "Reachable live source. Best treated as a companion dataset for UK area-code joins.",
+      "caveats": "Match boundary year and area-code version to the statistical table being mapped.",
+      "download_links": [
+        {
+          "label": "LSOA 2021 boundaries GeoJSON",
+          "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Lower_layer_Super_Output_Areas_December_2021_Boundaries_EW_BGC_V5/FeatureServer/0/query?where=1%3D1&outFields=LSOA21CD,LSOA21NM&returnGeometry=true&f=geojson",
+          "format": "GeoJSON"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "unhcr-population",
+      "title": "UNHCR Refugee Population Statistics API",
+      "category": "people-places",
+      "description": "UNHCR population statistics for refugees, asylum seekers, internally displaced people and related displacement categories.",
+      "story_ideas": [
+        "Refugee origins and asylum countries",
+        "Displacement by region",
+        "Return and resettlement trends"
+      ],
+      "source": "https://api.unhcr.org/docs/refugee-statistics.html",
+      "links": [
+        {
+          "label": "UNHCR Refugee Statistics API docs",
+          "url": "https://api.unhcr.org/docs/refugee-statistics.html"
+        }
+      ],
+      "formats": [
+        "CSV ZIP",
+        "JSON API"
+      ],
+      "access": "Use the protected CSV ZIP example for 2020-2024, or remove download=true for JSON pagination.",
+      "size": "The 2020-2024 all-country CSV ZIP probe was about 257KB.",
+      "license": "UNHCR data terms; cite UNHCR Refugee Population Statistics Database.",
+      "validation": "Direct no-key API query returned an application/zip CSV download.",
+      "caveats": "Definitions and country coding matter; do not mix displacement categories casually.",
+      "download_links": [
+        {
+          "label": "Population 2020-2024 CSV download",
+          "url": "https://api.unhcr.org/population/v1/population/?yearFrom=2020&yearTo=2024&coo_all=true&coa_all=true&cf_type=ISO&download=true",
+          "format": "CSV ZIP"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "world-bank-wdi",
+      "title": "World Bank World Development Indicators",
+      "category": "people-places",
+      "description": "Global country-level indicators across economy, health, education, energy, environment, infrastructure and poverty.",
+      "story_ideas": [
+        "Animated country trajectories",
+        "Bubble charts",
+        "Development correlations"
+      ],
+      "source": "https://datatopics.worldbank.org/world-development-indicators/",
+      "links": [
+        {
+          "label": "WDI",
+          "url": "https://datatopics.worldbank.org/world-development-indicators/"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "Excel",
+        "JSON API",
+        "XML API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with WDI CSV ZIP (ZIP of CSV).",
+      "size": "Bulk WDI is broad but manageable; API subsets are easy.",
+      "license": "World Bank data terms.",
+      "validation": "Reachable/current.",
+      "caveats": "Country/year coverage and source definitions vary; revisions are common.",
+      "download_links": [
+        {
+          "label": "WDI CSV ZIP",
+          "url": "https://databankfiles.worldbank.org/public/ddpext_download/WDI_CSV.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "bus-open-data",
+      "title": "Bus Open Data Service - England",
+      "category": "transit-travel",
+      "description": "England local bus timetables, fares and live vehicle-location feeds.",
+      "story_ideas": [
+        "Route networks",
+        "Service frequency comparison",
+        "Live-bus punctuality experiments"
+      ],
+      "source": "https://www.gov.uk/guidance/find-and-use-bus-open-data",
+      "links": [
+        {
+          "label": "Find and use bus open data",
+          "url": "https://www.gov.uk/guidance/find-and-use-bus-open-data"
+        }
+      ],
+      "formats": [
+        "TransXChange XML",
+        "SIRI-VM",
+        "NeTEx",
+        "API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with All timetables GTFS ZIP (ZIP of GTFS text/CSV).",
+      "size": "Large nationally; manageable by operator, region or feed.",
+      "license": "DfT open data terms.",
+      "validation": "Reachable/current.",
+      "caveats": "Live data is operational and can be stale/noisy; not a tidy single-table dataset.",
+      "download_links": [
+        {
+          "label": "All timetables GTFS ZIP",
+          "url": "https://data.bus-data.dft.gov.uk/timetable/download/gtfs-file/all/",
+          "format": "ZIP of GTFS text/CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "citibike-jan-2024",
+      "title": "Citi Bike January 2024 Trip Data",
+      "category": "transit-travel",
+      "description": "Monthly NYC-region bike-share trips with ride IDs, timestamps, stations, coordinates and member/casual flags.",
+      "story_ideas": [
+        "Winter bike-share demand",
+        "Station flows",
+        "Member vs casual behaviour"
+      ],
+      "source": "https://citibikenyc.com/system-data",
+      "links": [
+        {
+          "label": "Citi Bike system data",
+          "url": "https://citibikenyc.com/system-data"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected January 2024 ZIP for a bounded analysis; avoid pulling the whole historical bucket.",
+      "size": "About 369MB for this month.",
+      "license": "Citi Bike/Lyft system data licence.",
+      "validation": "Direct public S3 ZIP returned application/zip with expected content length.",
+      "caveats": "Monthly files are large; privacy-preserving fields and schema can change over time.",
+      "download_links": [
+        {
+          "label": "January 2024 Citi Bike trip ZIP",
+          "url": "https://s3.amazonaws.com/tripdata/202401-citibike-tripdata.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "dft-road-traffic",
+      "title": "DfT Road Traffic Counts",
+      "category": "transit-travel",
+      "description": "GB traffic counts and annual average daily flows for count points and road links.",
+      "story_ideas": [
+        "Traffic concentration maps",
+        "Road-type comparisons",
+        "Commuter-corridor changes"
+      ],
+      "source": "https://roadtraffic.dft.gov.uk/downloads",
+      "links": [
+        {
+          "label": "Road traffic downloads",
+          "url": "https://roadtraffic.dft.gov.uk/downloads"
+        },
+        {
+          "label": "Road traffic homepage",
+          "url": "https://roadtraffic.dft.gov.uk/"
+        }
+      ],
+      "formats": [
+        "CSV ZIP",
+        "JSON API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with AADF counts ZIP (ZIP of CSV).",
+      "size": "Manageable; raw counts are millions of rows but still ordinary data-tool scale.",
+      "license": "Open Government Licence.",
+      "validation": "Reachable/current.",
+      "caveats": "Use estimation method flags; counted data is stronger than estimated traffic.",
+      "download_links": [
+        {
+          "label": "AADF counts ZIP",
+          "url": "https://storage.googleapis.com/dft-statistics/road-traffic/downloads/data-gov-uk/dft_traffic_counts_aadf.zip",
+          "format": "ZIP of CSV"
+        },
+        {
+          "label": "Count points ZIP",
+          "url": "https://storage.googleapis.com/dft-statistics/road-traffic/downloads/data-gov-uk/count_points.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "divvy-2018-q3",
+      "title": "Divvy Chicago Trip Data - 2018 Q3",
+      "category": "transit-travel",
+      "description": "Chicago bike-share trip data for a manageable historical quarter, suitable for station-flow and seasonality analysis.",
+      "story_ideas": [
+        "Chicago station flows",
+        "Weekday vs weekend use",
+        "Subscriber vs customer patterns"
+      ],
+      "source": "https://divvybikes.com/system-data",
+      "links": [
+        {
+          "label": "Divvy system data",
+          "url": "https://divvybikes.com/system-data"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected 2018 Q3 ZIP and note older Divvy schemas differ from current Lyft/Cyclistic schemas.",
+      "size": "About 39MB.",
+      "license": "Divvy Data License Agreement.",
+      "validation": "Direct public S3 ZIP returned application/zip with expected content length.",
+      "caveats": "Older schemas differ from newer files; demographic fields should be handled carefully.",
+      "download_links": [
+        {
+          "label": "Divvy 2018 Q3 trip ZIP",
+          "url": "https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2018_Q3.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "tfl-journeys-mode",
+      "title": "London Public Transport Journeys by Mode",
+      "category": "transit-travel",
+      "description": "TfL reporting-period journey counts by bus, Underground, DLR, tram, Overground and other modes.",
+      "story_ideas": [
+        "Pandemic recovery",
+        "Mode-shift time series",
+        "Long-run London transport demand"
+      ],
+      "source": "https://data.london.gov.uk/dataset/public-transport-journeys-by-type-of-transport-ep8ow/",
+      "links": [
+        {
+          "label": "London Datastore dataset",
+          "url": "https://data.london.gov.uk/dataset/public-transport-journeys-by-type-of-transport-ep8ow/"
+        }
+      ],
+      "formats": [
+        "Spreadsheet",
+        "CSV-style table"
+      ],
+      "access": "Use the protected download links in this catalogue; start with TfL journeys by mode XLSX (XLSX).",
+      "size": "Small and classroom-friendly.",
+      "license": "London Datastore / OGL terms.",
+      "validation": "Reachable; sub-agent saw a recent update.",
+      "caveats": "TfL reporting periods differ in length; mode definitions and coverage change over time.",
+      "download_links": [
+        {
+          "label": "TfL journeys by mode XLSX",
+          "url": "https://data.london.gov.uk/download/ep8ow/a7a69c22-150c-49f3-a1fd-90d4c24d98d4/tfl-journeys-type.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "mbta-gtfs",
+      "title": "MBTA Static GTFS Schedule Feed",
+      "category": "transit-travel",
+      "description": "Boston-area static transit schedules in standard GTFS tables inside one ZIP.",
+      "story_ideas": [
+        "Route coverage",
+        "Stop density",
+        "Service frequency by time of day"
+      ],
+      "source": "https://github.com/mbta/gtfs-documentation/blob/master/reference/gtfs.md",
+      "links": [
+        {
+          "label": "MBTA GTFS documentation",
+          "url": "https://github.com/mbta/gtfs-documentation/blob/master/reference/gtfs.md"
+        }
+      ],
+      "formats": [
+        "GTFS ZIP"
+      ],
+      "access": "Use the protected GTFS ZIP and parse the CSV-like .txt files.",
+      "size": "About 18MB.",
+      "license": "MBTA developer/open-data terms; cite MBTA.",
+      "validation": "Direct CDN GTFS ZIP returned application/zip with expected content length.",
+      "caveats": "Static schedule feed changes as planned service changes; not real-time operations.",
+      "download_links": [
+        {
+          "label": "MBTA GTFS ZIP",
+          "url": "https://cdn.mbta.com/MBTA_GTFS.zip",
+          "format": "GTFS ZIP"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "mta-subway-gtfs",
+      "title": "MTA NYC Subway Static GTFS Feed",
+      "category": "transit-travel",
+      "description": "Static GTFS schedule feed for New York City subway routes, stops, trips and service calendars.",
+      "story_ideas": [
+        "Subway network topology",
+        "Stop spacing",
+        "Line service frequency"
+      ],
+      "source": "https://new.mta.info/developers",
+      "links": [
+        {
+          "label": "MTA developer data",
+          "url": "https://new.mta.info/developers"
+        }
+      ],
+      "formats": [
+        "GTFS ZIP"
+      ],
+      "access": "Use the protected GTFS ZIP; parse the standard CSV-like .txt files inside.",
+      "size": "About 5.6MB.",
+      "license": "MTA developer/data terms; cite MTA.",
+      "validation": "Direct S3 GTFS ZIP returned application/zip with expected content length.",
+      "caveats": "Static schedules are not live service status; schema follows GTFS conventions.",
+      "download_links": [
+        {
+          "label": "NYC subway GTFS ZIP",
+          "url": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip",
+          "format": "GTFS ZIP"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "naptan",
+      "title": "NaPTAN Public Transport Access Nodes",
+      "category": "transit-travel",
+      "description": "GB public transport stops and stations, including bus, rail, tram, ferry, airport and coach nodes.",
+      "story_ideas": [
+        "Transport-desert maps",
+        "Stop density by neighbourhood",
+        "Accessibility baselines"
+      ],
+      "source": "https://beta-naptan.dft.gov.uk/download",
+      "links": [
+        {
+          "label": "NaPTAN download",
+          "url": "https://beta-naptan.dft.gov.uk/download"
+        },
+        {
+          "label": "NaPTAN service",
+          "url": "https://beta-naptan.dft.gov.uk/"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "XML",
+        "API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with NaPTAN national CSV API (CSV API).",
+      "size": "Manageable national reference dataset.",
+      "license": "Open Government Licence.",
+      "validation": "Reachable/current.",
+      "caveats": "Reference stops only, not schedules; excludes Northern Ireland.",
+      "download_links": [
+        {
+          "label": "NaPTAN national CSV API",
+          "url": "https://naptan.api.dft.gov.uk/v1/access-nodes?dataFormat=csv",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "nyc-taxi",
+      "title": "NYC Taxi and For-Hire Vehicle Trip Records",
+      "category": "transit-travel",
+      "description": "Monthly NYC taxi and for-hire vehicle trip files with pickup/drop-off times, zones, fares and trip attributes.",
+      "story_ideas": [
+        "Taxi demand by hour",
+        "Airport route economics",
+        "Tip and fare patterns"
+      ],
+      "source": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+      "links": [
+        {
+          "label": "NYC TLC trip records",
+          "url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page"
+        }
+      ],
+      "formats": [
+        "Parquet",
+        "CSV zone lookup"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Green Taxi CSV API sample (CSV API).",
+      "size": "Very large full history; manageable by month/type.",
+      "license": "NYC open data terms.",
+      "validation": "Reachable/current.",
+      "caveats": "Schema changes across years; full-history use needs database tooling.",
+      "download_links": [
+        {
+          "label": "Green Taxi CSV API sample",
+          "url": "https://data.cityofnewyork.us/resource/pqfs-mqru.csv?$limit=5000",
+          "format": "CSV API"
+        },
+        {
+          "label": "Taxi zones CSV",
+          "url": "https://data.cityofnewyork.us/api/views/8meu-9t5y/rows.csv?accessType=DOWNLOAD",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "orr-station-usage",
+      "title": "ORR Estimates of Station Usage",
+      "category": "transit-travel",
+      "description": "Annual entries, exits and interchanges for railway stations in Great Britain.",
+      "story_ideas": [
+        "Busiest and quietest stations",
+        "Regional rail dependence",
+        "Post-pandemic recovery"
+      ],
+      "source": "https://dataportal.orr.gov.uk/statistics/usage/estimates-of-station-usage/",
+      "links": [
+        {
+          "label": "ORR station usage",
+          "url": "https://dataportal.orr.gov.uk/statistics/usage/estimates-of-station-usage/"
+        }
+      ],
+      "formats": [
+        "ODS",
+        "CSV"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Table 1410 CSV (CSV).",
+      "size": "Small and very manageable.",
+      "license": "ORR open data terms.",
+      "validation": "Reachable/current; latest release April 2024 to March 2025.",
+      "caveats": "Estimates are ticket-sales based, not observed footfall.",
+      "download_links": [
+        {
+          "label": "Table 1410 CSV",
+          "url": "https://dataportal.orr.gov.uk/media/1909/table-1410-passenger-entries-and-exits-and-interchanges-by-station.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Table 1410 ODS",
+          "url": "https://dataportal.orr.gov.uk/media/1907/table-1410-passenger-entries-and-exits-and-interchanges-by-station.ods",
+          "format": "ODS"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "ourairports",
+      "title": "OurAirports Global Airports and Runways",
+      "category": "transit-travel",
+      "description": "Lightweight global CSVs for airports, runways, countries and regions, updated frequently and easy to map.",
+      "story_ideas": [
+        "Airports per capita",
+        "Runway length distributions",
+        "Global aviation accessibility"
+      ],
+      "source": "https://ourairports.com/data/",
+      "links": [
+        {
+          "label": "OurAirports data downloads",
+          "url": "https://ourairports.com/data/"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected CSV files directly; join airports to runways by airport identifiers.",
+      "size": "Small: airports about 3.9MB, runways about 1.3MB.",
+      "license": "Public domain.",
+      "validation": "Chrome source page showed CSV downloads; direct CSV links returned text/csv.",
+      "caveats": "Community-maintained metadata may lag official aviation sources.",
+      "download_links": [
+        {
+          "label": "Airports CSV",
+          "url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Runways CSV",
+          "url": "https://davidmegginson.github.io/ourairports-data/runways.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Countries CSV",
+          "url": "https://davidmegginson.github.io/ourairports-data/countries.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Regions CSV",
+          "url": "https://davidmegginson.github.io/ourairports-data/regions.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "tfl-cycle-hire",
+      "title": "TfL Cycle Hire Usage",
+      "category": "transit-travel",
+      "description": "Historical journey data for London's cycle-hire scheme.",
+      "story_ideas": [
+        "Rush-hour cycling flows",
+        "Station-pair networks",
+        "Weather and usage experiments"
+      ],
+      "source": "https://cycling.data.tfl.gov.uk/",
+      "links": [
+        {
+          "label": "TfL cycling data bucket",
+          "url": "https://cycling.data.tfl.gov.uk/"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "API/XML for live BikePoint status"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Example journey CSV (CSV).",
+      "size": "Manageable by file or month; all history is larger.",
+      "license": "TfL open data terms.",
+      "validation": "Reachable public bucket.",
+      "caveats": "Bucket listing can be JS-like; journey data is historical, live API covers station status.",
+      "download_links": [
+        {
+          "label": "Example journey CSV",
+          "url": "https://s3-eu-west-1.amazonaws.com/cycling.data.tfl.gov.uk/usage-stats/01aJourneyDataExtract10Jan16-23Jan16.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "2014 usage ZIP",
+          "url": "https://s3-eu-west-1.amazonaws.com/cycling.data.tfl.gov.uk/usage-stats/cyclehireusagestats-2014.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "us-bts-on-time",
+      "title": "US BTS Airline On-Time Statistics",
+      "category": "transit-travel",
+      "description": "US domestic flight on-time, delay, cancellation, carrier, route and airport data.",
+      "story_ideas": [
+        "Delay networks",
+        "Airport rankings",
+        "Weather-delay seasonality"
+      ],
+      "source": "https://www.transtats.bts.gov/ontime/",
+      "links": [
+        {
+          "label": "BTS On-Time Statistics",
+          "url": "https://www.transtats.bts.gov/ontime/"
+        },
+        {
+          "label": "TranStats fields",
+          "url": "https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ"
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "CSV"
+      ],
+      "access": "Use the protected download links in this catalogue; start with February 2026 on-time ZIP (ZIP of CSV).",
+      "size": "Monthly files are manageable; full history is many GB.",
+      "license": "US public domain/federal open data where stated.",
+      "validation": "Reachable/current; latest available data seen as February 2026.",
+      "caveats": "UI can be JS-heavy; carrier code reuse and schema timing matter.",
+      "download_links": [
+        {
+          "label": "February 2026 on-time ZIP",
+          "url": "https://transtats.bts.gov/PREZIP/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2026_2.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "washington-ev-population",
+      "title": "Washington State Electric Vehicle Population Data",
+      "category": "transit-travel",
+      "description": "Washington vehicle-registration records for battery-electric and plug-in hybrid vehicles, with geography and vehicle attributes.",
+      "story_ideas": [
+        "EV adoption by county",
+        "Make and model mix",
+        "Electric range distribution"
+      ],
+      "source": "https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2",
+      "links": [
+        {
+          "label": "Washington EV population data",
+          "url": "https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2"
+        }
+      ],
+      "formats": [
+        "CSV API"
+      ],
+      "access": "Use the protected Socrata CSV query; add county, city or model filters for smaller slices.",
+      "size": "Manageable state-level Socrata table.",
+      "license": "Washington State open-data portal terms.",
+      "validation": "Direct Socrata CSV query returned text/csv.",
+      "caveats": "Registration location is not necessarily where a vehicle is driven or charged.",
+      "download_links": [
+        {
+          "label": "EV population CSV",
+          "url": "https://data.wa.gov/resource/f6w7-q2d2.csv?$limit=500000",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "chicago-crimes",
+      "title": "Chicago Crimes - Filtered Monthly Extract",
+      "category": "public-safety",
+      "description": "Police-reported Chicago incident records with type, date, location fields and community context for a bounded month.",
+      "story_ideas": [
+        "Monthly incident trends",
+        "Neighbourhood crime mix",
+        "Seasonality by primary type"
+      ],
+      "source": "https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/6zsd-86xi",
+      "links": [
+        {
+          "label": "Chicago Crimes 2001-present",
+          "url": "https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/6zsd-86xi"
+        }
+      ],
+      "formats": [
+        "CSV API"
+      ],
+      "access": "Use the protected January 2025 query; adjust date filters for other months.",
+      "size": "Manageable one-month extract with 50k row limit.",
+      "license": "City of Chicago open-data terms.",
+      "validation": "Direct Socrata CSV query returned text/csv.",
+      "caveats": "Incident data is not a measure of all crime; reporting, classification and privacy masking matter.",
+      "download_links": [
+        {
+          "label": "January 2025 Chicago crimes CSV",
+          "url": "https://data.cityofchicago.org/resource/6zsd-86xi.csv?$limit=50000&$where=date%20between%20%272025-01-01T00:00:00%27%20and%20%272025-01-31T23:59:59%27",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "fema-disasters",
+      "title": "FEMA Disaster Declarations Summaries",
+      "category": "public-safety",
+      "description": "OpenFEMA disaster declarations since 1953 with incident type, geography, dates and assistance-program fields.",
+      "story_ideas": [
+        "Disaster declarations by decade",
+        "Flood and hurricane hotspots",
+        "Assistance-program patterns"
+      ],
+      "source": "https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2",
+      "links": [
+        {
+          "label": "OpenFEMA disaster declarations",
+          "url": "https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2"
+        }
+      ],
+      "formats": [
+        "JSON API"
+      ],
+      "access": "Use the protected API page and paginate with $skip for more than 1000 rows.",
+      "size": "Manageable through API pages.",
+      "license": "OpenFEMA terms; cite FEMA/OpenFEMA.",
+      "validation": "Direct OpenFEMA API query returned application/json.",
+      "caveats": "Historical records can contain human-entry errors and partial fields.",
+      "download_links": [
+        {
+          "label": "Disaster declarations first page JSON",
+          "url": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries?$top=1000&$skip=0",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "fhwa-nbi",
+      "title": "FHWA National Bridge Inventory 2025",
+      "category": "public-safety",
+      "description": "U.S. bridge inventory records in comma-delimited format, covering condition, age, structure and route attributes.",
+      "story_ideas": [
+        "Bridge age distributions",
+        "Condition maps",
+        "State infrastructure comparisons"
+      ],
+      "source": "https://www.fhwa.dot.gov/bridge/nbi/ascii2025.cfm",
+      "links": [
+        {
+          "label": "FHWA NBI 2025 delimited files",
+          "url": "https://www.fhwa.dot.gov/bridge/nbi/ascii2025.cfm"
+        }
+      ],
+      "formats": [
+        "ZIP of delimited text"
+      ],
+      "access": "Use the protected all-states delimited ZIP and read FHWA field documentation for column meanings.",
+      "size": "About 59MB.",
+      "license": "U.S. DOT/FHWA public data; note Title 23 U.S.C. section 409 disclaimer.",
+      "validation": "Direct FHWA ZIP returned application/x-zip-compressed with expected content length.",
+      "caveats": "Records may be corrected during the year; disclosure and statutory caveats apply.",
+      "download_links": [
+        {
+          "label": "2025 all-states all-records delimited ZIP",
+          "url": "https://www.fhwa.dot.gov/bridge/nbi/2025allstatesallrecsdel.zip",
+          "format": "ZIP of delimited text"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "lfb-animal-rescues",
+      "title": "London Fire Brigade Animal Rescues",
+      "category": "public-safety",
+      "description": "Niche London Fire Brigade records for animal rescue incidents.",
+      "story_ideas": [
+        "Animal rescue geography",
+        "Incident type by borough",
+        "Playful emergency-service storytelling"
+      ],
+      "source": "https://data.london.gov.uk/dataset/animal-rescue-incidents-attended-by-lfb/",
+      "links": [
+        {
+          "label": "Animal rescue incidents",
+          "url": "https://data.london.gov.uk/dataset/animal-rescue-incidents-attended-by-lfb/"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "Spreadsheet"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Animal rescue incidents XLSX (XLSX).",
+      "size": "Very manageable; around a few MB.",
+      "license": "OGL / London Datastore terms.",
+      "validation": "Reachable/current.",
+      "caveats": "Notional cost field; no routine animal injury/death data.",
+      "download_links": [
+        {
+          "label": "Animal rescue incidents XLSX",
+          "url": "https://data.london.gov.uk/download/2ogkn/01007433-55c2-4b8a-b799-626d9e3bc284/Animal%20Rescue%20incidents%20attended%20by%20LFB%20from%20Jan%202009.csv.xlsx",
+          "format": "XLSX"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "lfb-incidents",
+      "title": "London Fire Brigade Incident Records",
+      "category": "public-safety",
+      "description": "Details of London Fire Brigade incidents since 2009, including incident type, property type and response context.",
+      "story_ideas": [
+        "Urban emergency maps",
+        "Response-time analysis",
+        "Incident-type seasonality"
+      ],
+      "source": "https://data.london.gov.uk/dataset/london-fire-brigade-incident-records-em8xy/",
+      "links": [
+        {
+          "label": "LFB incident records",
+          "url": "https://data.london.gov.uk/dataset/london-fire-brigade-incident-records-em8xy/"
+        }
+      ],
+      "formats": [
+        "XLSX",
+        "CSV",
+        "Metadata spreadsheet"
+      ],
+      "access": "Use the protected download links in this catalogue; start with LFB incidents 2024 onwards XLSX (XLSX).",
+      "size": "Large but manageable; individual chunks can be tens to hundreds of MB.",
+      "license": "OGL v2 / London Datastore terms.",
+      "validation": "Reachable/current corrected URL.",
+      "caveats": "Station-ground definitions changed after 2014 closures; later files can be large.",
+      "download_links": [
+        {
+          "label": "LFB incidents 2024 onwards XLSX",
+          "url": "https://data.london.gov.uk/download/em8xy/58m/LFB%20Incident%20data%20from%202024%20onwards.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "label": "LFB incidents 2009-2017 CSV",
+          "url": "https://data.london.gov.uk/download/em8xy/73728cf4-b70e-48e2-9b97-4e4341a2110d/LFB%20Incident%20data%20from%202009%20-%202017.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "nhtsa-fars",
+      "title": "NHTSA FARS National Fatal Crash Data",
+      "category": "public-safety",
+      "description": "U.S. fatal crash census data with accident, vehicle and person tables in a direct CSV ZIP.",
+      "story_ideas": [
+        "Fatal crash seasonality",
+        "Pedestrian and cyclist fatalities",
+        "Rural vs urban crash profiles"
+      ],
+      "source": "https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/",
+      "links": [
+        {
+          "label": "NHTSA FARS downloads",
+          "url": "https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected 2023 National CSV ZIP and read the codebooks from NHTSA for table definitions.",
+      "size": "About 34MB.",
+      "license": "U.S. federal public data; cite NHTSA/FARS.",
+      "validation": "Direct NHTSA ZIP returned application/x-zip-compressed with expected content length.",
+      "caveats": "Fatal crashes only; not comparable to all crash or injury datasets without context.",
+      "download_links": [
+        {
+          "label": "FARS 2023 National CSV ZIP",
+          "url": "https://static.nhtsa.gov/nhtsa/downloads/FARS/2023/National/FARS2023NationalCSV.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "nyc-collisions",
+      "title": "NYC Motor Vehicle Collisions - Crashes",
+      "category": "public-safety",
+      "description": "Police-reported New York City crash records with dates, locations, contributing factors and injury/fatality counts.",
+      "story_ideas": [
+        "Crash hotspots",
+        "Cyclist and pedestrian injury trends",
+        "Time-of-day risk profiles"
+      ],
+      "source": "https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95",
+      "links": [
+        {
+          "label": "NYC Open Data crash records",
+          "url": "https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95"
+        }
+      ],
+      "formats": [
+        "CSV API"
+      ],
+      "access": "Use the protected Socrata CSV query for a bounded 2025 extract; adjust date filters for other windows.",
+      "size": "Manageable with filters and row limit; full history is larger.",
+      "license": "NYC Open Data terms.",
+      "validation": "Direct Socrata CSV query returned text/csv.",
+      "caveats": "Police-report thresholds, missing locations and reporting completeness affect interpretation.",
+      "download_links": [
+        {
+          "label": "2025 crash CSV extract",
+          "url": "https://data.cityofnewyork.us/resource/h9gi-nx95.csv?$limit=50000&$where=crash_date%20between%20%272025-01-01T00:00:00%27%20and%20%272025-12-31T23:59:59%27",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "police-crime",
+      "title": "Police.uk Street-Level Crime Data",
+      "category": "public-safety",
+      "description": "Monthly street-level crime, outcome and stop/search data by force and small area.",
+      "story_ideas": [
+        "Crime-type maps",
+        "Seasonality",
+        "Neighbourhood comparison"
+      ],
+      "source": "https://data.police.uk/data/",
+      "links": [
+        {
+          "label": "Police data downloads",
+          "url": "https://data.police.uk/data/"
+        },
+        {
+          "label": "Police API",
+          "url": "https://data.police.uk/docs/"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "JSON API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Latest police archive ZIP (ZIP of CSV).",
+      "size": "Monthly/force batches manageable; full history can become multi-GB.",
+      "license": "Open Government Licence.",
+      "validation": "Reachable/current.",
+      "caveats": "Street locations are anonymised/approximate; reporting lag and force differences matter.",
+      "download_links": [
+        {
+          "label": "Latest police archive ZIP",
+          "url": "https://data.police.uk/data/archive/latest.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "stats19",
+      "title": "STATS19 Road Safety Open Data",
+      "category": "public-safety",
+      "description": "GB collision, vehicle and casualty records for recorded personal-injury road accidents.",
+      "story_ideas": [
+        "Collision hotspots",
+        "Severity by road condition",
+        "Vulnerable road-user analysis"
+      ],
+      "source": "https://www.gov.uk/government/statistical-data-sets/road-safety-open-data",
+      "links": [
+        {
+          "label": "Road safety open data",
+          "url": "https://www.gov.uk/government/statistical-data-sets/road-safety-open-data"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Collision 2024 CSV (CSV).",
+      "size": "Year files are easy; full 1979-2024 files approach or exceed 1GB by table.",
+      "license": "Open Government Licence.",
+      "validation": "Reachable/current; latest final validated full year identified as 2024.",
+      "caveats": "Relational data; public files exclude some sensitive/contributory-factor fields.",
+      "download_links": [
+        {
+          "label": "Collision 2024 CSV",
+          "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2024.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Vehicle 2024 CSV",
+          "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2024.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Casualty 2024 CSV",
+          "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2024.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "ucdp-ged",
+      "title": "UCDP Georeferenced Event Dataset",
+      "category": "public-safety",
+      "description": "Geocoded organized-violence events with dates, actors, deaths and locations.",
+      "story_ideas": [
+        "Conflict intensity maps",
+        "Yearly event trends",
+        "Actor-network summaries"
+      ],
+      "source": "https://ucdp.uu.se/downloads/",
+      "links": [
+        {
+          "label": "UCDP downloads",
+          "url": "https://ucdp.uu.se/downloads/"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected GED CSV ZIP and retain codebook/context for sensitive interpretation.",
+      "size": "About 29MB.",
+      "license": "Creative Commons Attribution 4.0.",
+      "validation": "Direct UCDP ZIP returned application/x-zip-compressed with expected content length.",
+      "caveats": "Conflict data is sensitive and reporting-biased; avoid simplistic causal claims.",
+      "download_links": [
+        {
+          "label": "GED 25.1 CSV ZIP",
+          "url": "https://ucdp.uu.se/downloads/ged/ged251-csv.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "historic-england-nhle",
+      "title": "Historic England National Heritage List for England",
+      "category": "homes-cities",
+      "description": "Spatial data for listed buildings, scheduled monuments, parks, gardens, battlefields, wrecks and World Heritage Sites.",
+      "story_ideas": [
+        "Heritage density",
+        "Grade distributions",
+        "Historic geography maps"
+      ],
+      "source": "https://historicengland.org.uk/listing/the-list/data-downloads/",
+      "links": [
+        {
+          "label": "NHLE data downloads",
+          "url": "https://historicengland.org.uk/listing/the-list/data-downloads/"
+        }
+      ],
+      "formats": [
+        "GIS downloads",
+        "ArcGIS services",
+        "API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with NHLE GeoJSON API sample (GeoJSON API).",
+      "size": "National layers manageable with GIS.",
+      "license": "Historic England open data terms.",
+      "validation": "Reachable/current; listed-building layers noted as updated on 2026-05-08.",
+      "caveats": "NHLE covers protected assets only; point and polygon layers answer different questions.",
+      "download_links": [
+        {
+          "label": "NHLE GeoJSON API sample",
+          "url": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/arcgis/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson&resultRecordCount=1",
+          "format": "GeoJSON API"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "land-registry-ppd",
+      "title": "HM Land Registry Price Paid Data",
+      "category": "homes-cities",
+      "description": "England and Wales property sale prices from 1995 onwards with monthly and yearly downloads.",
+      "story_ideas": [
+        "House-price heatmaps",
+        "Local price trajectories",
+        "New-build vs old-build comparison"
+      ],
+      "source": "https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads",
+      "links": [
+        {
+          "label": "GOV.UK Price Paid Data",
+          "url": "https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "TXT",
+        "Linked data"
+      ],
+      "access": "Use the protected download links in this catalogue; start with 2026 yearly CSV (CSV).",
+      "size": "Full CSV around 5.3GB; yearly CSVs roughly 115-230MB.",
+      "license": "Open Government Licence with address-data reuse restrictions.",
+      "validation": "Reachable; GOV.UK page last updated 2026-04-30.",
+      "caveats": "Current month is incomplete; address data has Royal Mail/OS restrictions beyond OGL.",
+      "download_links": [
+        {
+          "label": "2026 yearly CSV",
+          "url": "https://price-paid-data.publicdata.landregistry.gov.uk/pp-2026.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Complete CSV",
+          "url": "https://price-paid-data.publicdata.landregistry.gov.uk/pp-complete.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "inside-airbnb",
+      "title": "Inside Airbnb",
+      "category": "homes-cities",
+      "description": "Per-city Airbnb listings, reviews and calendar availability data.",
+      "story_ideas": [
+        "Tourism pressure maps",
+        "Short-let price geography",
+        "Housing impact exploration"
+      ],
+      "source": "https://insideairbnb.com/get-the-data/",
+      "links": [
+        {
+          "label": "Inside Airbnb data",
+          "url": "https://insideairbnb.com/get-the-data/"
+        }
+      ],
+      "formats": [
+        "CSV.GZ",
+        "CSV",
+        "GeoJSON"
+      ],
+      "access": "Use the protected download links in this catalogue; start with London listings CSV.GZ (CSV.GZ).",
+      "size": "Manageable city-by-city; global multi-city work is larger.",
+      "license": "CC0 waiver noted by Inside Airbnb.",
+      "validation": "Reachable/current.",
+      "caveats": "Scraped Airbnb data; selected cities and snapshot dates only.",
+      "download_links": [
+        {
+          "label": "London listings CSV.GZ",
+          "url": "https://data.insideairbnb.com/united-kingdom/england/london/2025-09-14/data/listings.csv.gz",
+          "format": "CSV.GZ"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "nyc-street-trees",
+      "title": "NYC 2015 Street Tree Census",
+      "category": "homes-cities",
+      "description": "Large but manageable inventory of New York City street trees with species, health, diameter and location fields.",
+      "story_ideas": [
+        "Species diversity by borough",
+        "Tree health hotspots",
+        "Urban canopy equity proxies"
+      ],
+      "source": "https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh",
+      "links": [
+        {
+          "label": "NYC street tree census",
+          "url": "https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected CSV download or add Socrata filters for borough/species subsets.",
+      "size": "666,134 records; manageable CSV.",
+      "license": "NYC Open Data terms; cite NYC Parks/NYC Open Data.",
+      "validation": "Direct NYC Open Data CSV route returned text/csv.",
+      "caveats": "Snapshot from 2015-2016; tree condition may have changed.",
+      "download_links": [
+        {
+          "label": "2015 street tree census CSV",
+          "url": "https://data.cityofnewyork.us/api/views/uvpi-gqnh/rows.csv?accessType=DOWNLOAD",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "nyc-311",
+      "title": "NYC 311 Service Requests - Filtered Extract",
+      "category": "homes-cities",
+      "description": "Bounded NYC service-request extract with agency, complaint type, borough and coordinates.",
+      "story_ideas": [
+        "Noise complaints by borough",
+        "Heat and housing complaints",
+        "Agency response patterns"
+      ],
+      "source": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9",
+      "links": [
+        {
+          "label": "NYC 311 service requests",
+          "url": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9"
+        }
+      ],
+      "formats": [
+        "CSV API"
+      ],
+      "access": "Use the protected one-month selected-column extract; avoid fetching the full 2010-present table.",
+      "size": "Manageable one-month extract with 50k row limit.",
+      "license": "NYC Open Data terms.",
+      "validation": "Direct Socrata CSV query returned text/csv.",
+      "caveats": "Complaint volume reflects reporting behaviour as well as underlying problems.",
+      "download_links": [
+        {
+          "label": "January 2025 selected 311 CSV",
+          "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.csv?$limit=50000&$select=created_date,agency,complaint_type,borough,latitude,longitude&$where=created_date%20between%20%272025-01-01%27%20and%20%272025-01-31%27",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "os-open-greenspace",
+      "title": "OS Open Greenspace",
+      "category": "homes-cities",
+      "description": "GB open data for parks, playing fields, sports facilities, play areas, allotments and access points.",
+      "story_ideas": [
+        "Park density",
+        "Greenspace access",
+        "Census and health joins"
+      ],
+      "source": "https://www.ordnancesurvey.co.uk/products/os-open-greenspace",
+      "links": [
+        {
+          "label": "OS Open Greenspace product",
+          "url": "https://www.ordnancesurvey.co.uk/products/os-open-greenspace"
+        },
+        {
+          "label": "OS Data Hub download",
+          "url": "https://osdatahub.os.uk/downloads/open/OpenGreenspace"
+        }
+      ],
+      "formats": [
+        "GeoPackage",
+        "Shapefile",
+        "GML",
+        "MBTiles"
+      ],
+      "access": "Use the protected download links in this catalogue; start with GB GeoPackage ZIP (ZIP / GeoPackage).",
+      "size": "National ZIPs roughly tens of MB.",
+      "license": "OS OpenData terms.",
+      "validation": "Reachable/current; biannual update schedule.",
+      "caveats": "GB only; tile extracts can duplicate features on tile boundaries.",
+      "download_links": [
+        {
+          "label": "GB GeoPackage ZIP",
+          "url": "https://api.os.uk/downloads/v1/products/OpenGreenspace/downloads?area=GB&format=GeoPackage&redirect",
+          "format": "ZIP / GeoPackage"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "planning-data",
+      "title": "Planning Data Platform - England",
+      "category": "homes-cities",
+      "description": "A beta national planning platform with datasets for planning, land, constraints and local-plan context.",
+      "story_ideas": [
+        "Development pressure maps",
+        "Brownfield and constraints analysis",
+        "Housing opportunity scans"
+      ],
+      "source": "https://www.planning.data.gov.uk/docs",
+      "links": [
+        {
+          "label": "Planning Data docs",
+          "url": "https://www.planning.data.gov.uk/docs"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "GeoJSON",
+        "API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Conservation areas CSV (CSV).",
+      "size": "Variable; most spatial layers manageable with GIS tooling.",
+      "license": "Open Government Licence where stated.",
+      "validation": "Reachable/current; beta API.",
+      "caveats": "Coverage varies by area; beta endpoints may change.",
+      "download_links": [
+        {
+          "label": "Conservation areas CSV",
+          "url": "https://files.planning.data.gov.uk/dataset/conservation-area.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Conservation areas GeoJSON",
+          "url": "https://files.planning.data.gov.uk/dataset/conservation-area.geojson",
+          "format": "GeoJSON"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "zillow-research",
+      "title": "Zillow Real Estate Research Data",
+      "category": "homes-cities",
+      "description": "US housing metrics such as home values, rents, inventory and days on market across multiple geographies.",
+      "story_ideas": [
+        "Housing affordability trends",
+        "ZIP code value trajectories",
+        "Migration and rent pressure"
+      ],
+      "source": "https://www.zillow.com/research/data/",
+      "links": [
+        {
+          "label": "Zillow research data",
+          "url": "https://www.zillow.com/research/data/"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected download links in this catalogue; start with City ZHVI CSV (CSV).",
+      "size": "Small-to-medium wide time-series tables.",
+      "license": "Zillow research data terms.",
+      "validation": "Reachable/current.",
+      "caveats": "CSV paths and methodology can change; ZHVI methodology changed from the January 2023 release.",
+      "download_links": [
+        {
+          "label": "City ZHVI CSV",
+          "url": "https://files.zillowstatic.com/research/public_csvs/zhvi/City_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "defra-uk-air",
+      "title": "Defra UK-AIR Modelled Background Pollution Maps",
+      "category": "weather-hazards",
+      "description": "Modelled UK background air-pollution concentrations by year and pollutant.",
+      "story_ideas": [
+        "1km pollution maps",
+        "Exposure and deprivation joins",
+        "Traffic-pollution comparison"
+      ],
+      "source": "https://uk-air.defra.gov.uk/data/pcm-data",
+      "links": [
+        {
+          "label": "UK-AIR modelled background data",
+          "url": "https://uk-air.defra.gov.uk/data/pcm-data"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected download links in this catalogue; start with PM10 2024 modelled background CSV (CSV).",
+      "size": "Manageable per pollutant-year.",
+      "license": "UK-AIR / Defra terms.",
+      "validation": "Reachable/current.",
+      "caveats": "Methodology can change by year; distinguish background maps from other LAQM products.",
+      "download_links": [
+        {
+          "label": "PM10 2024 modelled background CSV",
+          "url": "https://uk-air.defra.gov.uk/datastore/pcm/mappm102024g.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "ea-flood-api",
+      "title": "Environment Agency Flood Monitoring APIs",
+      "category": "weather-hazards",
+      "description": "River levels, flows, rainfall, groundwater and flood-monitoring station data.",
+      "story_ideas": [
+        "River response plots",
+        "Catchment dashboards",
+        "Flood-event timelines"
+      ],
+      "source": "https://environment.data.gov.uk/flood-monitoring/doc/reference",
+      "links": [
+        {
+          "label": "Flood monitoring API reference",
+          "url": "https://environment.data.gov.uk/flood-monitoring/doc/reference"
+        }
+      ],
+      "formats": [
+        "JSON",
+        "CSV",
+        "RDF",
+        "Turtle"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Latest level readings CSV (CSV).",
+      "size": "API-paginated and manageable.",
+      "license": "Environment Agency open data terms.",
+      "validation": "Reachable/current API docs.",
+      "caveats": "Service docs still mark alpha/instability; England-focused EA coverage.",
+      "download_links": [
+        {
+          "label": "Latest level readings CSV",
+          "url": "https://environment.data.gov.uk/flood-monitoring/data/readings.csv?latest&parameter=level",
+          "format": "CSV"
+        },
+        {
+          "label": "Latest level readings JSON",
+          "url": "https://environment.data.gov.uk/flood-monitoring/data/readings.json?latest&parameter=level",
+          "format": "JSON"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "epa-airdata-aqi",
+      "title": "EPA AirData Annual AQI by County",
+      "category": "weather-hazards",
+      "description": "Compact county-level annual air-quality summaries with AQI days and pollutant categories.",
+      "story_ideas": [
+        "Counties with most unhealthy days",
+        "Ozone vs PM patterns",
+        "Regional clean-air rankings"
+      ],
+      "source": "https://aqs.epa.gov/aqsweb/airdata/download_files.html",
+      "links": [
+        {
+          "label": "EPA AirData download files",
+          "url": "https://aqs.epa.gov/aqsweb/airdata/download_files.html"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected 2024 ZIP for a complete recent year; 2025 is also included for newer snapshots.",
+      "size": "Tiny: around 20KB per year.",
+      "license": "EPA public data; cite EPA AirData/AQS.",
+      "validation": "Chrome source page listed the ZIP; direct 2024 and 2025 ZIPs returned application/zip.",
+      "caveats": "AQI summaries depend on monitor coverage; no bad AQI days does not mean no pollution.",
+      "download_links": [
+        {
+          "label": "Annual AQI by county 2024 ZIP",
+          "url": "https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2024.zip",
+          "format": "ZIP of CSV"
+        },
+        {
+          "label": "Annual AQI by county 2025 ZIP",
+          "url": "https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2025.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "noaa-tides",
+      "title": "NOAA CO-OPS Tides and Currents Water Levels",
+      "category": "weather-hazards",
+      "description": "Public NOAA API for tide and water-level observations with station, date, datum and unit parameters.",
+      "story_ideas": [
+        "Tidal range by month",
+        "Storm-surge anomalies",
+        "Harbor water-level comparisons"
+      ],
+      "source": "https://api.tidesandcurrents.noaa.gov/api/prod/",
+      "links": [
+        {
+          "label": "NOAA Tides and Currents API",
+          "url": "https://api.tidesandcurrents.noaa.gov/api/prod/"
+        }
+      ],
+      "formats": [
+        "JSON API",
+        "CSV API"
+      ],
+      "access": "Use the protected JSON example, or change format=csv for CSV output.",
+      "size": "Small to moderate for a station-year.",
+      "license": "NOAA public data; cite NOAA CO-OPS and station metadata.",
+      "validation": "Direct API query returned application/json.",
+      "caveats": "Date limits vary by product; station, datum and time-zone choices matter.",
+      "download_links": [
+        {
+          "label": "Hourly water levels, station 8518750, 2020",
+          "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?begin_date=20200101&end_date=20201231&station=8518750&product=hourly_height&datum=MLLW&time_zone=lst&units=metric&application=DataAPI_Sample&format=json",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "noaa-spc-severe-weather",
+      "title": "NOAA Storm Prediction Center Severe Weather Reports",
+      "category": "weather-hazards",
+      "description": "Direct tornado, hail and wind report files across decades with location, date and event details.",
+      "story_ideas": [
+        "Tornado alleys by decade",
+        "Hail-size hotspots",
+        "Severe-wind seasonality"
+      ],
+      "source": "https://www.spc.noaa.gov/wcm/",
+      "links": [
+        {
+          "label": "SPC severe weather data page",
+          "url": "https://www.spc.noaa.gov/wcm/"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected tornado CSV or hail/wind ZIPs depending on the hazard story.",
+      "size": "Manageable: tornado CSV and hail/wind ZIPs are KB to low tens of MB.",
+      "license": "NOAA public data; cite NOAA SPC.",
+      "validation": "Chrome source page listed files; direct CSV/ZIP links returned data with expected content types.",
+      "caveats": "Reporting practices changed over time, so trend interpretation needs care.",
+      "download_links": [
+        {
+          "label": "All tornadoes 1950-2025 CSV",
+          "url": "https://www.spc.noaa.gov/wcm/data/1950-2025_all_tornadoes.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Hail reports 1955-2025 ZIP",
+          "url": "https://www.spc.noaa.gov/wcm/data/1955-2025_hail.csv.zip",
+          "format": "ZIP of CSV"
+        },
+        {
+          "label": "Wind reports 1955-2025 ZIP",
+          "url": "https://www.spc.noaa.gov/wcm/data/1955-2025_wind.csv.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "open-meteo-historical",
+      "title": "Open-Meteo Historical Weather API",
+      "category": "weather-hazards",
+      "description": "No-key historical weather API with date, coordinate and variable parameters for lightweight weather time-series work.",
+      "story_ideas": [
+        "Heatwave timelines",
+        "Rainy-day counts",
+        "City climate comparisons"
+      ],
+      "source": "https://open-meteo.com/en/docs/historical-weather-api",
+      "links": [
+        {
+          "label": "Open-Meteo historical API docs",
+          "url": "https://open-meteo.com/en/docs/historical-weather-api"
+        }
+      ],
+      "formats": [
+        "JSON API"
+      ],
+      "access": "Use the protected city/month example and adjust coordinates, dates and variables.",
+      "size": "Tiny for a city/month; easy to expand carefully.",
+      "license": "Open-Meteo API terms; attribution/usage limits should be checked for production reuse.",
+      "validation": "Direct API query returned application/json.",
+      "caveats": "Model/reanalysis weather may differ from station observations.",
+      "download_links": [
+        {
+          "label": "NYC January 2025 daily weather JSON",
+          "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.7128&longitude=-74.0060&start_date=2025-01-01&end_date=2025-01-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=America%2FNew_York",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "usgs-earthquakes",
+      "title": "USGS Earthquake Hazards Recent Feeds",
+      "category": "weather-hazards",
+      "description": "Rolling GeoJSON feeds of recent global earthquakes with magnitude, depth, time, location and event metadata.",
+      "story_ideas": [
+        "Recent quake hotspots",
+        "Magnitude-depth distributions",
+        "Aftershock clusters"
+      ],
+      "source": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
+      "links": [
+        {
+          "label": "USGS GeoJSON feed documentation",
+          "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php"
+        }
+      ],
+      "formats": [
+        "GeoJSON"
+      ],
+      "access": "Use the protected rolling-feed GeoJSON links; snapshot the file if reproducibility matters.",
+      "size": "Small rolling feeds, normally far below 1GB.",
+      "license": "USGS public data; cite USGS.",
+      "validation": "Direct GeoJSON feeds returned application/json; Chrome source page reached the USGS feed documentation.",
+      "caveats": "Rolling 30-day feed, not a permanent archive; magnitudes and locations may be revised.",
+      "download_links": [
+        {
+          "label": "All earthquakes, past 30 days",
+          "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
+          "format": "GeoJSON"
+        },
+        {
+          "label": "Magnitude 2.5+, past 30 days",
+          "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson",
+          "format": "GeoJSON"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "usgs-water",
+      "title": "USGS Water Services Streamflow Time Series",
+      "category": "weather-hazards",
+      "description": "Public hydrological time-series endpoints for streamflow and gauge height at USGS monitoring sites.",
+      "story_ideas": [
+        "Streamflow response to storms",
+        "Drought week comparisons",
+        "Gauge height vs discharge"
+      ],
+      "source": "https://waterservices.usgs.gov/docs/",
+      "links": [
+        {
+          "label": "USGS Water Services docs",
+          "url": "https://waterservices.usgs.gov/docs/"
+        }
+      ],
+      "formats": [
+        "JSON API"
+      ],
+      "access": "Use the protected example queries, then change sites, dates, period and parameterCd values for other gauges.",
+      "size": "Tiny to small for one site and date window.",
+      "license": "USGS public data; cite USGS and gauge metadata.",
+      "validation": "Direct curl probes returned application/json for instantaneous and daily-values examples.",
+      "caveats": "Parameter codes and site metadata matter; provisional values may later be revised.",
+      "download_links": [
+        {
+          "label": "Instantaneous streamflow/gauge height, 7 days",
+          "url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01646500&period=P7D&parameterCd=00060,00065&siteStatus=all",
+          "format": "JSON API"
+        },
+        {
+          "label": "Daily streamflow, 2025",
+          "url": "https://waterservices.usgs.gov/nwis/dv/?format=json&sites=01646500&startDT=2025-01-01&endDT=2025-12-31&parameterCd=00060",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "gbif-occurrence-api",
+      "title": "GBIF Occurrence Search API Example",
+      "category": "nature-science",
+      "description": "Public JSON endpoint for paged species occurrence records, useful for small biodiversity explorations.",
+      "story_ideas": [
+        "Species observations by month",
+        "Biodiversity reporting density",
+        "Urban vs rural records"
+      ],
+      "source": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "links": [
+        {
+          "label": "GBIF occurrence API docs",
+          "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+        }
+      ],
+      "formats": [
+        "JSON API"
+      ],
+      "access": "Use the protected bounded query; adjust country, year, limit and offset parameters for other slices.",
+      "size": "Small per query; pagination available.",
+      "license": "Per-record licences vary; use returned licence fields and cite GBIF/dataset sources.",
+      "validation": "Chrome source page reached API docs; direct occurrence query returned application/json.",
+      "caveats": "Sampling bias is substantial; records often reflect observer effort rather than true abundance.",
+      "download_links": [
+        {
+          "label": "GB 2024 coordinate occurrence sample",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=GB&hasCoordinate=true&year=2024&limit=300",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "nasa-exoplanet-archive",
+      "title": "NASA Exoplanet Archive Planetary Systems Table",
+      "category": "nature-science",
+      "description": "Direct TAP CSV query for confirmed exoplanet properties, discovery years, methods and host-star metadata.",
+      "story_ideas": [
+        "Discovery methods over time",
+        "Planet radius distributions",
+        "New planets since 2020"
+      ],
+      "source": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html",
+      "links": [
+        {
+          "label": "NASA Exoplanet Archive TAP docs",
+          "url": "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html"
+        }
+      ],
+      "formats": [
+        "CSV API"
+      ],
+      "access": "Use the protected filtered TAP CSV query; edit the SQL-like query for other columns or years.",
+      "size": "Small filtered query; full table is still manageable but can include multiple solutions.",
+      "license": "NASA/IPAC archive data; cite NASA Exoplanet Archive and query date.",
+      "validation": "Direct TAP query returned CSV-like text/plain data.",
+      "caveats": "Parameters are revised over time; multiple rows/solutions can exist.",
+      "download_links": [
+        {
+          "label": "Confirmed planets since 2020 CSV",
+          "url": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,hostname,disc_year,discoverymethod,pl_orbper,pl_rade,pl_bmasse+from+pscomppars+where+disc_year%3E=2020&format=csv",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "nasa-meteorites",
+      "title": "NASA Meteorite Landings",
+      "category": "nature-science",
+      "description": "Known meteorite landings with classification, mass and geolocation metadata.",
+      "story_ideas": [
+        "Global meteorite maps",
+        "Discovery trends",
+        "Mass and class distributions"
+      ],
+      "source": "https://github.com/INFO526-DataViz/project-final-Data-Dynamos/tree/main/data",
+      "links": [
+        {
+          "label": "Meteorite Landings CSV mirror",
+          "url": "https://github.com/INFO526-DataViz/project-final-Data-Dynamos/tree/main/data"
+        }
+      ],
+      "formats": [
+        "JSON",
+        "CSV via legacy endpoints"
+      ],
+      "access": "Use the protected download link in this catalogue; it points to a direct CSV mirror of the NASA/Socrata meteorite dataset.",
+      "size": "Tens of thousands of rows; small.",
+      "license": "Original NASA/Socrata dataset has been treated as public open data; verify mirror/source terms before redistribution.",
+      "validation": "Official Socrata export now fails from the agent path; kept via direct CSV mirror that returned bytes in validation.",
+      "caveats": "Known parsing issues in years and some 0/0 geolocations; mirror freshness may lag the original source.",
+      "download_links": [
+        {
+          "label": "Meteorite Landings CSV",
+          "url": "https://raw.githubusercontent.com/INFO526-DataViz/project-final-Data-Dynamos/main/data/Meteorite_Landings.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "nasa-jpl-close-approach",
+      "title": "NASA/JPL Small-Body Close-Approach Data API",
+      "category": "nature-science",
+      "description": "Machine-readable asteroid and comet close-approach records for timelines, rankings and miss-distance analysis.",
+      "story_ideas": [
+        "Closest approaches by year",
+        "Object size vs miss distance",
+        "Monthly approach patterns"
+      ],
+      "source": "https://ssd-api.jpl.nasa.gov/doc/cad.html",
+      "links": [
+        {
+          "label": "JPL close-approach API docs",
+          "url": "https://ssd-api.jpl.nasa.gov/doc/cad.html"
+        }
+      ],
+      "formats": [
+        "JSON API"
+      ],
+      "access": "Use the protected 2025 close-approach query and adjust date or distance filters.",
+      "size": "Small for bounded year/distance queries.",
+      "license": "NASA/JPL public scientific data terms.",
+      "validation": "Direct JPL API query returned application/json.",
+      "caveats": "Orbital solutions update; record query date for reproducibility.",
+      "download_links": [
+        {
+          "label": "2025 close approaches within 0.05 AU",
+          "url": "https://ssd-api.jpl.nasa.gov/cad.api?date-min=2025-01-01&date-max=2025-12-31&dist-max=0.05&fullname=true",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "national-forest-inventory",
+      "title": "National Forest Inventory GB",
+      "category": "nature-science",
+      "description": "Spatial map of GB woodland over 0.5 hectares.",
+      "story_ideas": [
+        "Woodland cover maps",
+        "Urban tree access",
+        "Forest cover and deprivation"
+      ],
+      "source": "https://www.gov.uk/guidance/access-forestry-commission-datasets",
+      "links": [
+        {
+          "label": "Access Forestry Commission datasets",
+          "url": "https://www.gov.uk/guidance/access-forestry-commission-datasets"
+        }
+      ],
+      "formats": [
+        "Shapefile",
+        "GeoJSON",
+        "FileGDB",
+        "ArcGIS services"
+      ],
+      "access": "Use the protected download links in this catalogue; start with NFI GB 2024 GeoJSON API sample (GeoJSON API).",
+      "size": "National spatial layer; manageable in GIS/database.",
+      "license": "Forestry Commission open data terms.",
+      "validation": "Reachable/current via Forestry Commission open data route.",
+      "caveats": "Spatial tooling recommended; check item version and country coverage.",
+      "download_links": [
+        {
+          "label": "NFI GB 2024 GeoJSON API sample",
+          "url": "https://services2.arcgis.com/mHXjwgl3OARRqqD4/arcgis/rest/services/National_Forest_Inventory_GB_2024/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson&resultRecordCount=1",
+          "format": "GeoJSON API"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "desnz-need",
+      "title": "DESNZ NEED Energy Consumption Tables",
+      "category": "energy-emissions",
+      "description": "Domestic gas and electricity consumption tables by local authority and household/property attributes.",
+      "story_ideas": [
+        "Energy efficiency by area",
+        "Housing age and consumption",
+        "Fuel-poverty-adjacent analysis"
+      ],
+      "source": "https://www.gov.uk/government/statistics/national-energy-efficiency-data-framework-need-consumption-data-tables-2025",
+      "links": [
+        {
+          "label": "NEED 2025 tables",
+          "url": "https://www.gov.uk/government/statistics/national-energy-efficiency-data-framework-need-consumption-data-tables-2025"
+        }
+      ],
+      "formats": [
+        "Excel",
+        "ODS"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Local authority consumption XLSX (XLSX).",
+      "size": "KB to a few MB per table.",
+      "license": "Open Government Licence.",
+      "validation": "Reachable; 2025 tables published 2025-06-26.",
+      "caveats": "Aggregated tables are easy; property-level NEED is controlled.",
+      "download_links": [
+        {
+          "label": "Local authority consumption XLSX",
+          "url": "https://assets.publishing.service.gov.uk/media/685be2050433072fce0e0feb/Consumption_local_authority_EW_2023.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "label": "Local authority consumption ODS",
+          "url": "https://assets.publishing.service.gov.uk/media/685be33e89ba18761d9760f6/Consumption_local_authority_EW_2023.ods",
+          "format": "ODS"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "eia-seds",
+      "title": "EIA State Energy Data System Complete File",
+      "category": "energy-emissions",
+      "description": "State-level U.S. energy time series for consumption, prices, expenditures, production, indicators and CO2 emissions.",
+      "story_ideas": [
+        "State energy transitions",
+        "Per-capita CO2",
+        "Renewable growth by state"
+      ],
+      "source": "https://www.eia.gov/state/seds/seds-data-complete.php",
+      "links": [
+        {
+          "label": "EIA complete SEDS data",
+          "url": "https://www.eia.gov/state/seds/seds-data-complete.php"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected consolidated ZIP and filter the long-format file by series/state/year.",
+      "size": "About 9MB ZIP; over 2.3M long-format records.",
+      "license": "U.S. EIA public data; cite EIA.",
+      "validation": "Direct EIA ZIP returned application/x-zip-compressed with expected content length.",
+      "caveats": "Many series are estimates; use series metadata and units carefully.",
+      "download_links": [
+        {
+          "label": "Complete SEDS ZIP",
+          "url": "https://www.eia.gov/state/seds/CDF/Complete_SEDS.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "global-power-plants",
+      "title": "Global Power Plant Database",
+      "category": "energy-emissions",
+      "description": "Global inventory of power plants with capacity, fuel type and geolocation.",
+      "story_ideas": [
+        "Energy transition maps",
+        "Fuel-mix by region",
+        "Plant-capacity distributions"
+      ],
+      "source": "https://datasets.wri.org/datasets/global-power-plant-database",
+      "links": [
+        {
+          "label": "WRI Global Power Plant Database",
+          "url": "https://datasets.wri.org/datasets/global-power-plant-database"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "ZIP/layer",
+        "API/layer service"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Global power plants CSV (CSV).",
+      "size": "Roughly 35k plants; manageable.",
+      "license": "WRI data terms.",
+      "validation": "Reachable/current WRI portal; v1.3.0 release noted.",
+      "caveats": "Generation values are often annual/historical; fuel fields need careful interpretation.",
+      "download_links": [
+        {
+          "label": "Global power plants CSV",
+          "url": "https://raw.githubusercontent.com/wri/global-power-plant-database/master/output_database/global_power_plant_database.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "neso-demand",
+      "title": "NESO Historic Electricity Demand Data",
+      "category": "energy-emissions",
+      "description": "Great Britain half-hourly electricity demand and related system time series.",
+      "story_ideas": [
+        "Daily load curves",
+        "Renewable variability",
+        "Seasonal demand comparison"
+      ],
+      "source": "https://www.neso.energy/data-portal/historic-demand-data",
+      "links": [
+        {
+          "label": "NESO historic demand",
+          "url": "https://www.neso.energy/data-portal/historic-demand-data"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "Portal API metadata"
+      ],
+      "access": "Use the protected download links in this catalogue; start with 2026 demand CSV (CSV).",
+      "size": "Yearly half-hourly CSVs are very manageable.",
+      "license": "NESO data portal terms.",
+      "validation": "Reachable/live.",
+      "caveats": "GB electricity-system demand, not all UK final energy consumption.",
+      "download_links": [
+        {
+          "label": "2026 demand CSV",
+          "url": "https://api.neso.energy/dataset/8f2fe0af-871c-488d-8bad-960426f24601/resource/8a4a771c-3929-4e56-93ad-cdf13219dea5/download/demanddata_2026.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "owid-co2",
+      "title": "Our World in Data CO2 and Greenhouse Gas Emissions",
+      "category": "energy-emissions",
+      "description": "Clean country-level historical emissions indicators from Our World in Data.",
+      "story_ideas": [
+        "Country trajectories",
+        "Per-capita emissions",
+        "Energy transition comparisons"
+      ],
+      "source": "https://github.com/owid/co2-data",
+      "links": [
+        {
+          "label": "OWID CO2 GitHub",
+          "url": "https://github.com/owid/co2-data"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "XLSX",
+        "JSON"
+      ],
+      "access": "Use the protected download links in this catalogue; start with OWID CO2 CSV (CSV).",
+      "size": "Small and very manageable.",
+      "license": "OWID data licence plus underlying-source citation requirements.",
+      "validation": "Reachable/current.",
+      "caveats": "Derived and standardised; cite OWID and underlying sources.",
+      "download_links": [
+        {
+          "label": "OWID CO2 CSV",
+          "url": "https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "bls-qcew",
+      "title": "BLS QCEW 2024 Annual Single File",
+      "category": "work-trade",
+      "description": "County and industry employment and wage records in a direct annual CSV ZIP.",
+      "story_ideas": [
+        "County wage rankings",
+        "Local industry concentration",
+        "Sector job growth"
+      ],
+      "source": "https://www.bls.gov/cew/downloadable-data-files.htm",
+      "links": [
+        {
+          "label": "BLS QCEW downloadable files",
+          "url": "https://www.bls.gov/cew/downloadable-data-files.htm"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected 2024 annual ZIP and filter by area or industry.",
+      "size": "About 75MB.",
+      "license": "U.S. BLS public data; cite BLS QCEW.",
+      "validation": "Direct BLS data ZIP returned application/zip with expected content length.",
+      "caveats": "Suppression/disclosure rules affect some cells; excludes some worker categories.",
+      "download_links": [
+        {
+          "label": "2024 annual single-file CSV ZIP",
+          "url": "https://data.bls.gov/cew/data/files/2024/csv/2024_annual_singlefile.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "bres",
+      "title": "Business Register and Employment Survey - Nomis",
+      "category": "work-trade",
+      "description": "Employee jobs by geography and detailed industry for Great Britain.",
+      "story_ideas": [
+        "Local industry clusters",
+        "Public/private employment",
+        "Sectoral change maps"
+      ],
+      "source": "https://www.nomisweb.co.uk/datasets/newbres6pub",
+      "links": [
+        {
+          "label": "Nomis BRES open access",
+          "url": "https://www.nomisweb.co.uk/datasets/newbres6pub"
+        }
+      ],
+      "formats": [
+        "Nomis API",
+        "CSV",
+        "JSON",
+        "XML"
+      ],
+      "access": "Use the protected download links in this catalogue; start with BRES Nomis CSV API sample (CSV API).",
+      "size": "Potentially large by geography x SIC x status; manageable with filters.",
+      "license": "Nomis / ONS terms.",
+      "validation": "Reachable/current; latest data identified as 2024.",
+      "caveats": "Open access estimates are rounded; safeguarded lower-rounding data requires UK EUL authorisation.",
+      "download_links": [
+        {
+          "label": "BRES Nomis CSV API sample",
+          "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_189_1.data.csv?geography=default&industry=default&employment_status=default&measure=default&measures=20100&date=latest&RecordLimit=5",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "faostat-oceania-production",
+      "title": "FAOSTAT Crops and Livestock Production - Oceania",
+      "category": "work-trade",
+      "description": "Official FAOSTAT regional subset for crop and livestock production with country-year-item structure.",
+      "story_ideas": [
+        "Crop production shifts",
+        "Livestock output by country",
+        "Commodity specialisation"
+      ],
+      "source": "https://www.fao.org/faostat/",
+      "links": [
+        {
+          "label": "FAOSTAT",
+          "url": "https://www.fao.org/faostat/"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected Oceania ZIP to avoid the much larger global all-data dump.",
+      "size": "About 794KB ZIP.",
+      "license": "FAO/FAOSTAT terms; cite FAOSTAT.",
+      "validation": "Direct FAOSTAT bulk ZIP returned application/x-zip-compressed.",
+      "caveats": "Country reporting quality, commodity names, flags and units need careful use.",
+      "download_links": [
+        {
+          "label": "Oceania crops and livestock production ZIP",
+          "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_Oceania.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "hmrc-trade",
+      "title": "HMRC UK Overseas Trade Statistics",
+      "category": "work-trade",
+      "description": "Commodity and partner-country UK import/export statistics.",
+      "story_ideas": [
+        "Trade Sankey diagrams",
+        "Commodity treemaps",
+        "Partner-country dependencies"
+      ],
+      "source": "https://www.uktradeinfo.com/trade-data/",
+      "links": [
+        {
+          "label": "UKTradeInfo trade data",
+          "url": "https://www.uktradeinfo.com/trade-data/"
+        }
+      ],
+      "formats": [
+        "ODS",
+        "XLSX",
+        "Bulk/API routes"
+      ],
+      "access": "Use the protected download links in this catalogue; start with HMRC OTS JSON API sample (JSON API).",
+      "size": "Summary tables small; full commodity/partner/flow data larger.",
+      "license": "HMRC / UKTradeInfo terms.",
+      "validation": "Reachable/current.",
+      "caveats": "Statistical trade data, not transaction-level microdata; commodity-code revisions matter.",
+      "download_links": [
+        {
+          "label": "HMRC OTS JSON API sample",
+          "url": "https://api.uktradeinfo.com/OTS?$top=1",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "irs-county-income",
+      "title": "IRS County Income Data",
+      "category": "work-trade",
+      "description": "County-level U.S. tax-return aggregates by adjusted-gross-income band.",
+      "story_ideas": [
+        "Income concentration by county",
+        "Charitable giving by AGI band",
+        "Tax-base geography"
+      ],
+      "source": "https://www.irs.gov/statistics/soi-tax-stats-county-data",
+      "links": [
+        {
+          "label": "IRS county data",
+          "url": "https://www.irs.gov/statistics/soi-tax-stats-county-data"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected county CSV directly.",
+      "size": "Manageable single CSV.",
+      "license": "U.S. federal public data.",
+      "validation": "Direct IRS CSV returned text/csv in probes.",
+      "caveats": "Tax-return data excludes non-filers and is aggregated by income bands.",
+      "download_links": [
+        {
+          "label": "2021 county income by AGI CSV",
+          "url": "https://www.irs.gov/pub/irs-soi/21incyallagi.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "ons-productivity",
+      "title": "ONS Subregional Labour Productivity",
+      "category": "work-trade",
+      "description": "Local and subregional productivity indices: output per hour and output per job.",
+      "story_ideas": [
+        "Prosperity-gap maps",
+        "City-region comparison",
+        "Productivity and transport links"
+      ],
+      "source": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/labourproductivity/datasets/subregionalproductivitylabourproductivityindicesbylocalauthoritydistrict/current",
+      "links": [
+        {
+          "label": "ONS productivity by local authority",
+          "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/labourproductivity/datasets/subregionalproductivitylabourproductivityindicesbylocalauthoritydistrict/current"
+        }
+      ],
+      "formats": [
+        "XLS",
+        "XLSX"
+      ],
+      "access": "Use the protected download links in this catalogue; start with ONS LAD productivity XLS (XLS).",
+      "size": "Tiny; current file roughly hundreds of KB.",
+      "license": "Open Government Licence.",
+      "validation": "Reachable/current; latest listed release 2024-06-17.",
+      "caveats": "Revisions are normal; geographies may not match newer local boundaries.",
+      "download_links": [
+        {
+          "label": "ONS LAD productivity XLS",
+          "url": "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/labourproductivity/datasets/subregionalproductivitylabourproductivityindicesbylocalauthoritydistrict/current/labourproductivitylad1.xls",
+          "format": "XLS"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "charity-register",
+      "title": "Charity Commission Full Register Download",
+      "category": "money-organisations",
+      "description": "Daily public extract of registered charities in England and Wales.",
+      "story_ideas": [
+        "Voluntary-sector density",
+        "Charity-purpose networks",
+        "Income distributions"
+      ],
+      "source": "https://register-of-charities.charitycommission.gov.uk/en/register/full-register-download",
+      "links": [
+        {
+          "label": "Full register download",
+          "url": "https://register-of-charities.charitycommission.gov.uk/en/register/full-register-download"
+        }
+      ],
+      "formats": [
+        "JSON ZIP",
+        "Tab-delimited ZIP"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Charity register JSON ZIP (ZIP of JSON).",
+      "size": "Moderate and manageable; relational tables.",
+      "license": "Charity Commission open data terms.",
+      "validation": "Reachable/current.",
+      "caveats": "England and Wales only; public extract excludes non-public fields.",
+      "download_links": [
+        {
+          "label": "Charity register JSON ZIP",
+          "url": "https://ccewuksprdoneregsadata1.blob.core.windows.net/data/json/publicextract.charity.zip",
+          "format": "ZIP of JSON"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "companies-house",
+      "title": "Companies House Free Company Data Product",
+      "category": "money-organisations",
+      "description": "Monthly snapshot of live UK companies with basic company data.",
+      "story_ideas": [
+        "Company density maps",
+        "SIC-code industry clusters",
+        "New-company geography"
+      ],
+      "source": "https://download.companieshouse.gov.uk/",
+      "links": [
+        {
+          "label": "Companies House downloads",
+          "url": "https://download.companieshouse.gov.uk/"
+        },
+        {
+          "label": "Data products guidance",
+          "url": "https://www.gov.uk/guidance/companies-house-data-products"
+        }
+      ],
+      "formats": [
+        "CSV in ZIP"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Basic company data May 2026 ZIP (ZIP of CSV).",
+      "size": "Large but split into manageable ZIPs; good database-load candidate.",
+      "license": "Companies House open data terms.",
+      "validation": "Reachable/current.",
+      "caveats": "Basic register snapshot only; accounts data is a separate product.",
+      "download_links": [
+        {
+          "label": "Basic company data May 2026 ZIP",
+          "url": "https://download.companieshouse.gov.uk/BasicCompanyDataAsOneFile-2026-05-01.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "fdic-failed-banks",
+      "title": "FDIC Failed Bank List",
+      "category": "money-organisations",
+      "description": "Tiny CSV of U.S. bank failures since October 2000 with location, acquiring institution and closing date.",
+      "story_ideas": [
+        "Bank failures by state/year",
+        "Crisis-era comparison",
+        "Acquiring institutions"
+      ],
+      "source": "https://www.fdic.gov/bank-failures/failed-bank-list",
+      "links": [
+        {
+          "label": "FDIC failed bank list",
+          "url": "https://www.fdic.gov/bank-failures/failed-bank-list"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected FDIC CSV directly.",
+      "size": "Tiny, about 46KB in validation.",
+      "license": "FDIC public data; cite FDIC.",
+      "validation": "Direct CSV returned text/csv and sample rows.",
+      "caveats": "Only includes failures since October 1, 2000; not full banking history.",
+      "download_links": [
+        {
+          "label": "Failed bank list CSV",
+          "url": "https://www.fdic.gov/bank-failures/download-data.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "ipsa-costs",
+      "title": "IPSA MPs Staffing and Business Costs",
+      "category": "money-organisations",
+      "description": "Annual and periodic CSV data on UK MPs' staffing, budgets, claims and business costs.",
+      "story_ideas": [
+        "Constituency spending comparison",
+        "Travel and office-cost analysis",
+        "Public spending transparency"
+      ],
+      "source": "https://www.theipsa.org.uk/mp-staffing-business-costs/annual-publications",
+      "links": [
+        {
+          "label": "IPSA annual publications",
+          "url": "https://www.theipsa.org.uk/mp-staffing-business-costs/annual-publications"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Total spend 2024-25 CSV endpoint (CSV).",
+      "size": "Small; typically hundreds of KB per annual file.",
+      "license": "OGL v3 unless stated.",
+      "validation": "Suggested URL had moved; current IPSA publication page reachable.",
+      "caveats": "Some fields withheld for security/data protection; recent business costs are periodically updated.",
+      "download_links": [
+        {
+          "label": "Total spend 2024-25 CSV endpoint",
+          "url": "https://ipsapublic-preview.azurewebsites.net/api/download?type=totalSpend&year=24_25",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "us-treasury-mts",
+      "title": "U.S. Treasury Monthly Treasury Statement Table 1",
+      "category": "money-organisations",
+      "description": "Monthly federal receipts, outlays and deficit data from the U.S. Treasury Fiscal Data API.",
+      "story_ideas": [
+        "Deficit by month",
+        "Receipts vs outlays",
+        "Fiscal-year seasonality"
+      ],
+      "source": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/summary-of-receipts-and-outlays-of-the-u-s-government",
+      "links": [
+        {
+          "label": "Monthly Treasury Statement dataset",
+          "url": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/summary-of-receipts-and-outlays-of-the-u-s-government"
+        }
+      ],
+      "formats": [
+        "CSV API",
+        "JSON API"
+      ],
+      "access": "Use the protected CSV API query; pagination is available for larger pages.",
+      "size": "Small to moderate; probe returned about 498KB.",
+      "license": "U.S. Treasury public data; cite Fiscal Data/Treasury.",
+      "validation": "Direct Fiscal Data API query returned text/csv.",
+      "caveats": "Federal fiscal categories can change; use table metadata and accounting context.",
+      "download_links": [
+        {
+          "label": "MTS Table 1 CSV API",
+          "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1?format=csv&page%5Bsize%5D=10000&sort=-record_date",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "global-findex",
+      "title": "World Bank Global Findex",
+      "category": "money-organisations",
+      "description": "Financial inclusion data on saving, borrowing, payments and risk management across economies.",
+      "story_ideas": [
+        "Mobile-money adoption maps",
+        "Bank-account access comparison",
+        "Financial inclusion by income group"
+      ],
+      "source": "https://www.worldbank.org/en/publication/globalfindex/download-data",
+      "links": [
+        {
+          "label": "Global Findex downloads",
+          "url": "https://www.worldbank.org/en/publication/globalfindex/download-data"
+        }
+      ],
+      "formats": [
+        "XLSX",
+        "CSV",
+        "Stata",
+        "DataBank"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Global Findex 2025 CSV (CSV).",
+      "size": "Country indicators small; microdata medium.",
+      "license": "World Bank terms.",
+      "validation": "Reachable/current.",
+      "caveats": "Survey weights and country comparability matter.",
+      "download_links": [
+        {
+          "label": "Global Findex 2025 CSV",
+          "url": "https://thedocs.worldbank.org/en/doc/be6615202d1f08a25855c8ac2d615122-0050012025/related/GlobalFindexDatabase2025.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "cdc-chronic-disease-indicators",
+      "title": "CDC Chronic Disease Indicators",
+      "category": "health-food",
+      "description": "State and national chronic-disease indicators covering outcomes, risk factors and preventive measures.",
+      "story_ideas": [
+        "State chronic-disease dashboards",
+        "Prevention vs outcome comparisons",
+        "Smoking or diabetes trends"
+      ],
+      "source": "https://www.cdc.gov/cdi/",
+      "links": [
+        {
+          "label": "CDC Chronic Disease Indicators",
+          "url": "https://www.cdc.gov/cdi/"
+        }
+      ],
+      "formats": [
+        "CSV API"
+      ],
+      "access": "Use the protected Socrata CSV query and subset by topic, year or location.",
+      "size": "Manageable with limit/subset parameters.",
+      "license": "CDC public data/open-data portal terms.",
+      "validation": "Direct CDC Socrata CSV route returned text/csv.",
+      "caveats": "Indicators come from multiple surveillance systems; definitions vary by topic.",
+      "download_links": [
+        {
+          "label": "CDC CDI CSV",
+          "url": "https://data.cdc.gov/resource/hksd-2xuw.csv?$limit=500000",
+          "format": "CSV API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "cdc-places",
+      "title": "CDC PLACES Local Health Estimates",
+      "category": "health-food",
+      "description": "Model-based local health estimates for outcomes, prevention, risk factors and health status across U.S. counties and places.",
+      "story_ideas": [
+        "County diabetes maps",
+        "City smoking estimates",
+        "Rural and urban health contrasts"
+      ],
+      "source": "https://www.cdc.gov/places/",
+      "links": [
+        {
+          "label": "CDC PLACES",
+          "url": "https://www.cdc.gov/places/"
+        }
+      ],
+      "formats": [
+        "CSV API"
+      ],
+      "access": "Use the protected county or place CSV routes; retain confidence intervals and measure metadata where present.",
+      "size": "Manageable as county/place CSV queries; Socrata filters can reduce size.",
+      "license": "CDC public data/open-data portal terms.",
+      "validation": "Direct CDC Socrata CSV routes returned text/csv.",
+      "caveats": "Model-based estimates, not direct clinical measurements; compare like geographies/measures.",
+      "download_links": [
+        {
+          "label": "PLACES county 2025 CSV",
+          "url": "https://data.cdc.gov/resource/swc5-untb.csv?$limit=50000",
+          "format": "CSV API"
+        },
+        {
+          "label": "PLACES place 2024 CSV",
+          "url": "https://data.cdc.gov/api/views/sd8v-uq83/rows.csv?accessType=DOWNLOAD",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "cdc-svi",
+      "title": "CDC/ATSDR Social Vulnerability Index 2022",
+      "category": "health-food",
+      "description": "County-level Social Vulnerability Index GeoJSON with themes and overall vulnerability ranks.",
+      "story_ideas": [
+        "County vulnerability maps",
+        "Disaster preparedness targeting",
+        "SVI vs health outcomes"
+      ],
+      "source": "https://www.atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html",
+      "links": [
+        {
+          "label": "CDC SVI documentation",
+          "url": "https://www.atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html"
+        }
+      ],
+      "formats": [
+        "GeoJSON API"
+      ],
+      "access": "Use both protected GeoJSON pages because the ArcGIS service limits records per request.",
+      "size": "A few MB across two county-layer pages.",
+      "license": "CDC/ATSDR/GRASP; uses ACS inputs.",
+      "validation": "Direct ArcGIS REST GeoJSON query returned application/geo+json.",
+      "caveats": "CDC warns against comparing SVI versions directly because boundaries and variables change.",
+      "download_links": [
+        {
+          "label": "SVI county GeoJSON page 1",
+          "url": "https://onemap.cdc.gov/onemapservices/rest/services/SVI/CDC_ATSDR_Social_Vulnerability_Index_2022_USA/MapServer/1/query?where=1%3D1&outFields=*&f=geojson&resultRecordCount=2000&resultOffset=0",
+          "format": "GeoJSON API"
+        },
+        {
+          "label": "SVI county GeoJSON page 2",
+          "url": "https://onemap.cdc.gov/onemapservices/rest/services/SVI/CDC_ATSDR_Social_Vulnerability_Index_2022_USA/MapServer/1/query?where=1%3D1&outFields=*&f=geojson&resultRecordCount=2000&resultOffset=2000",
+          "format": "GeoJSON API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "fsa-food-hygiene",
+      "title": "Food Standards Agency Food Hygiene Ratings API",
+      "category": "health-food",
+      "description": "UK food hygiene ratings for restaurants, cafes, pubs, hospitals and other establishments.",
+      "story_ideas": [
+        "Restaurant hygiene maps",
+        "Council rating distributions",
+        "Cuisine/name text analysis"
+      ],
+      "source": "https://ratings.food.gov.uk/open-data?lang=en-US",
+      "links": [
+        {
+          "label": "FSA open data",
+          "url": "https://ratings.food.gov.uk/open-data?lang=en-US"
+        },
+        {
+          "label": "Food.gov API page",
+          "url": "https://www.food.gov.uk/uk-food-hygiene-rating-data-api"
+        }
+      ],
+      "formats": [
+        "JSON API",
+        "XML API",
+        "XML open data files"
+      ],
+      "access": "Use the protected download links in this catalogue; start with All food hygiene ratings CSV (CSV).",
+      "size": "UK-wide data manageable.",
+      "license": "FSA open data terms.",
+      "validation": "Reachable/current.",
+      "caveats": "API throttling; private-address establishments may omit address/geocoding.",
+      "download_links": [
+        {
+          "label": "All food hygiene ratings CSV",
+          "url": "https://safhrsprodstorage.blob.core.windows.net/opendatafileblobstorage/FHRS_All_en-GB.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Authorities JSON API",
+          "url": "https://api1-ratings.food.gov.uk/Authorities/basic",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "open-food-facts",
+      "title": "Open Food Facts",
+      "category": "health-food",
+      "description": "Crowdsourced global food-product data with ingredients, allergens, nutrition and eco-score fields.",
+      "story_ideas": [
+        "Sugar/additive prevalence",
+        "Country product comparison",
+        "Nutrition label analysis"
+      ],
+      "source": "https://world.openfoodfacts.org/data",
+      "links": [
+        {
+          "label": "Open Food Facts data",
+          "url": "https://world.openfoodfacts.org/data"
+        },
+        {
+          "label": "API docs",
+          "url": "https://openfoodfacts.github.io/documentation/docs/Product-Opener/api/"
+        }
+      ],
+      "formats": [
+        "JSONL.GZ",
+        "CSV",
+        "MongoDB dump",
+        "RDF",
+        "API JSON"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Sample product JSON (JSON).",
+      "size": "Full bulk data is large; use subsets to stay under 1GB.",
+      "license": "ODbL-style reuse obligations.",
+      "validation": "Reachable source and API docs.",
+      "caveats": "User-contributed completeness/accuracy varies; bulk preferred for many products.",
+      "download_links": [
+        {
+          "label": "Sample product JSON",
+          "url": "https://world.openfoodfacts.org/api/v2/product/737628064502.json",
+          "format": "JSON"
+        },
+        {
+          "label": "Search JSON example",
+          "url": "https://world.openfoodfacts.org/cgi/search.pl?search_terms=chocolate&search_simple=1&action=process&json=1&page_size=1",
+          "format": "JSON"
+        },
+        {
+          "label": "Bulk products CSV.GZ",
+          "url": "https://static.openfoodfacts.org/data/en.openfoodfacts.org.products.csv.gz",
+          "format": "CSV.GZ"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "usda-food-environment-atlas",
+      "title": "USDA Food Environment Atlas",
+      "category": "health-food",
+      "description": "County and state indicators for food access, stores, restaurants, SNAP, local food, demographics and health context.",
+      "story_ideas": [
+        "Food deserts vs poverty",
+        "SNAP participation geography",
+        "Local-food availability"
+      ],
+      "source": "https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads",
+      "links": [
+        {
+          "label": "USDA ERS Food Environment Atlas downloads",
+          "url": "https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV",
+        "XLSX"
+      ],
+      "access": "Use the protected CSV ZIP for structured tables, or the XLSX for a single workbook.",
+      "size": "About 6.5MB CSV ZIP.",
+      "license": "USDA Economic Research Service data; cite USDA ERS.",
+      "validation": "Direct USDA ERS CSV ZIP returned application/zip with expected content length.",
+      "caveats": "Variables come from different source years and geographies; compare like with like.",
+      "download_links": [
+        {
+          "label": "Food Environment Atlas CSV ZIP",
+          "url": "https://www.ers.usda.gov/media/5570/food-environment-atlas-csv-files.zip?v=57913",
+          "format": "ZIP of CSV"
+        },
+        {
+          "label": "Food Environment Atlas XLSX",
+          "url": "https://www.ers.usda.gov/media/5569/food-environment-atlas-data-download.xlsx?v=87643",
+          "format": "XLSX"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "usda-fooddata-foundation",
+      "title": "USDA FoodData Central Foundation Foods",
+      "category": "health-food",
+      "description": "Structured nutrient profiles for foundation foods with food and nutrient tables.",
+      "story_ideas": [
+        "Nutrient-density comparisons",
+        "Sugar and sodium distributions",
+        "Protein sources by food category"
+      ],
+      "source": "https://fdc.nal.usda.gov/download-datasets/",
+      "links": [
+        {
+          "label": "USDA FoodData Central downloads",
+          "url": "https://fdc.nal.usda.gov/download-datasets/"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV"
+      ],
+      "access": "Use the protected Foundation Foods CSV ZIP and join tables by FoodData Central IDs.",
+      "size": "About 3.8MB zipped.",
+      "license": "USDA public data; FoodData Central indicates public-domain/CC0 style use.",
+      "validation": "Direct USDA ZIP returned application/zip with expected content length.",
+      "caveats": "Foundation Foods is narrower than the full branded-food corpus; joins across tables are needed.",
+      "download_links": [
+        {
+          "label": "Foundation Foods CSV ZIP",
+          "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_csv_2026-04-30.zip",
+          "format": "ZIP of CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "loc-chronicling-america",
+      "title": "Library of Congress Chronicling America API",
+      "category": "arts-archives",
+      "description": "Structured JSON access to historic newspaper collection metadata and records through Library of Congress APIs.",
+      "story_ideas": [
+        "Newspaper coverage by state/year",
+        "Topic mentions over time",
+        "Publication geography"
+      ],
+      "source": "https://www.loc.gov/apis/additional-apis/chronicling-america-api/",
+      "links": [
+        {
+          "label": "Chronicling America API docs",
+          "url": "https://www.loc.gov/apis/additional-apis/chronicling-america-api/"
+        }
+      ],
+      "formats": [
+        "JSON API"
+      ],
+      "access": "Use the protected collection JSON query and paginate with LOC parameters for more records.",
+      "size": "Page-sized JSON responses; the sample returned about 3.3MB.",
+      "license": "LOC collection/API terms; item rights vary.",
+      "validation": "Direct LOC JSON query returned application/json.",
+      "caveats": "OCR/page batches can be large; rights statements and metadata completeness vary by item.",
+      "download_links": [
+        {
+          "label": "Chronicling America collection JSON sample",
+          "url": "https://www.loc.gov/collections/chronicling-america/?fo=json&c=100",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "met-open-access",
+      "title": "Metropolitan Museum of Art Open Access CSV",
+      "category": "arts-archives",
+      "description": "Large but manageable CSV of Met collection metadata, including artists, objects, dates, departments, geography and classifications.",
+      "story_ideas": [
+        "Acquisition timelines",
+        "Object geography",
+        "Department and classification trends"
+      ],
+      "source": "https://github.com/metmuseum/openaccess",
+      "links": [
+        {
+          "label": "Met Open Access GitHub",
+          "url": "https://github.com/metmuseum/openaccess"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected GitHub media CSV link directly; images are not included.",
+      "size": "About 318MB.",
+      "license": "CC0 to the extent possible under law; cite The Met Open Access dataset.",
+      "validation": "Direct media.githubusercontent CSV returned text/plain with expected content length.",
+      "caveats": "Some records are incomplete; images and object rights are separate from metadata.",
+      "download_links": [
+        {
+          "label": "MetObjects CSV",
+          "url": "https://media.githubusercontent.com/media/metmuseum/openaccess/master/MetObjects.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "moma-collection",
+      "title": "Museum of Modern Art Collection",
+      "category": "arts-archives",
+      "description": "MoMA artists and artworks metadata with demographics, mediums, dates and dimensions.",
+      "story_ideas": [
+        "Gender representation",
+        "Medium emergence over time",
+        "Acquisition patterns"
+      ],
+      "source": "https://github.com/MuseumofModernArt/collection",
+      "links": [
+        {
+          "label": "MoMA collection GitHub",
+          "url": "https://github.com/MuseumofModernArt/collection"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "JSON"
+      ],
+      "access": "Use the protected download links in this catalogue; start with MoMA artists CSV (CSV).",
+      "size": "Manageable; about 160k artworks and 15.9k artists.",
+      "license": "CC0 with attribution and source notes.",
+      "validation": "Reachable/current GitHub repo.",
+      "caveats": "Metadata only; do not misrepresent source or rights.",
+      "download_links": [
+        {
+          "label": "MoMA artists CSV",
+          "url": "https://media.githubusercontent.com/media/MuseumofModernArt/collection/main/Artists.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "MoMA artworks CSV",
+          "url": "https://media.githubusercontent.com/media/MuseumofModernArt/collection/main/Artworks.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "nps-visitor-use",
+      "title": "National Park Service Visitor Use Statistics",
+      "category": "arts-archives",
+      "description": "Annual and monthly visitor-use records by U.S. national park unit, useful for tourism rankings and long-run trends.",
+      "story_ideas": [
+        "Busiest parks by decade",
+        "COVID-era visitation recovery",
+        "Seasonality by park type"
+      ],
+      "source": "https://irma.nps.gov/DataStore/Reference/Profile/2317666",
+      "links": [
+        {
+          "label": "NPS data package profile",
+          "url": "https://irma.nps.gov/DataStore/Reference/Profile/2317666"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected main and state CSV files directly.",
+      "size": "About 72MB for main data and 22MB for state data.",
+      "license": "CC0 / public-domain style terms on source page.",
+      "validation": "Direct NPS download URLs returned CSV-like files with expected sizes.",
+      "caveats": "Park counts can be affected by closures, method changes and special events.",
+      "download_links": [
+        {
+          "label": "NPS main visitor-use CSV",
+          "url": "https://irma.nps.gov/DataStore/DownloadFile/756959?Reference=2317666",
+          "format": "CSV"
+        },
+        {
+          "label": "NPS state visitor-use CSV",
+          "url": "https://irma.nps.gov/DataStore/DownloadFile/756960?Reference=2317666",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "old-bailey",
+      "title": "Old Bailey Online Data",
+      "category": "arts-archives",
+      "description": "London criminal trial records, 1674-1913, in rich structured text and API formats.",
+      "story_ideas": [
+        "Punishment trends",
+        "Gender and crime analysis",
+        "Topic modelling timelines"
+      ],
+      "source": "https://www.dhi.ac.uk/blogs/old-bailey/api/",
+      "links": [
+        {
+          "label": "Old Bailey API notes",
+          "url": "https://www.dhi.ac.uk/blogs/old-bailey/api/"
+        },
+        {
+          "label": "Original data page",
+          "url": "https://www.oldbaileyonline.org/about/data"
+        }
+      ],
+      "formats": [
+        "JSON API",
+        "TEI-XML"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Old Bailey record JSON API sample (JSON API).",
+      "size": "Bulk XML around hundreds of MB; API results manageable.",
+      "license": "Old Bailey Online terms.",
+      "validation": "Old page was bot-blocked locally; DHI API docs and XML route validated by sub-agent.",
+      "caveats": "Historical markup is complex; API and XML versions may differ after overhaul.",
+      "download_links": [
+        {
+          "label": "Old Bailey record JSON API sample",
+          "url": "https://www.dhi.ac.uk/api/data/oldbailey_record?text=Sheffield",
+          "format": "JSON API"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "roman-amphitheaters",
+      "title": "Roman Amphitheaters Database",
+      "category": "arts-archives",
+      "description": "Geolocation, dimensions, capacity and metadata for known Roman amphitheaters.",
+      "story_ideas": [
+        "Ancient urbanisation maps",
+        "Capacity distributions",
+        "Empire spatial spread"
+      ],
+      "source": "https://github.com/roman-amphitheaters/roman-amphitheaters",
+      "links": [
+        {
+          "label": "Roman amphitheaters GitHub",
+          "url": "https://github.com/roman-amphitheaters/roman-amphitheaters"
+        },
+        {
+          "label": "Project site",
+          "url": "https://roman-amphitheaters.org/"
+        }
+      ],
+      "formats": [
+        "GeoJSON",
+        "CSV",
+        "QGIS project",
+        "Notebook"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Roman amphitheaters GeoJSON (GeoJSON).",
+      "size": "Small and very manageable.",
+      "license": "Project/repo terms.",
+      "validation": "Reachable project and GitHub source.",
+      "caveats": "Developing scholarly dataset; entries and citations may improve over time.",
+      "download_links": [
+        {
+          "label": "Roman amphitheaters GeoJSON",
+          "url": "https://raw.githubusercontent.com/roman-amphitheaters/roman-amphitheaters/main/roman-amphitheaters.geojson",
+          "format": "GeoJSON"
+        },
+        {
+          "label": "Roman amphitheaters CSV",
+          "url": "https://raw.githubusercontent.com/roman-amphitheaters/roman-amphitheaters/main/roman-amphitheaters.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "slave-voyages",
+      "title": "Slave Voyages Database",
+      "category": "arts-archives",
+      "description": "Records of trans-Atlantic and intra-American slaving expeditions.",
+      "story_ideas": [
+        "Forced-migration routes",
+        "Voyage timelines",
+        "Port and ship network analysis"
+      ],
+      "source": "https://www.slavevoyages.org/voyage/database",
+      "links": [
+        {
+          "label": "Slave Voyages database",
+          "url": "https://www.slavevoyages.org/voyage/database"
+        }
+      ],
+      "formats": [
+        "Excel export",
+        "CSV after export",
+        "Codebook PDF"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Trans-Atlantic slave trade CSV (CSV).",
+      "size": "Manageable when filtered; full database still tabular-scale.",
+      "license": "Slave Voyages terms.",
+      "validation": "Reachable database/tutorial route.",
+      "caveats": "Separate trans-Atlantic and intra-American databases; many variables are imputed and historically sensitive.",
+      "download_links": [
+        {
+          "label": "Trans-Atlantic slave trade CSV",
+          "url": "https://legacy.slavevoyages.org/documents/download/tastdb-exp-2019.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Intra-American slave trade CSV",
+          "url": "https://legacy.slavevoyages.org/documents/download/I-Am1.0.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "ssa-baby-names",
+      "title": "Social Security Baby Names",
+      "category": "arts-archives",
+      "description": "U.S. baby-name counts by year, sex and name, with national and state-level ZIP files.",
+      "story_ideas": [
+        "Fastest-rising names",
+        "Pop-culture naming shocks",
+        "Regional naming trends"
+      ],
+      "source": "https://www.ssa.gov/oact/babynames/limits.html",
+      "links": [
+        {
+          "label": "SSA baby names data limits",
+          "url": "https://www.ssa.gov/oact/babynames/limits.html"
+        }
+      ],
+      "formats": [
+        "ZIP of CSV-like text"
+      ],
+      "access": "Use the protected national or state ZIP and parse the simple comma-separated text files.",
+      "size": "About 7.9MB national ZIP and 27.5MB state ZIP.",
+      "license": "SSA public data; cite Social Security Administration.",
+      "validation": "Direct SSA ZIPs returned application/zip with expected content lengths.",
+      "caveats": "Names with fewer than five occurrences are suppressed; hyphens/spaces are removed.",
+      "download_links": [
+        {
+          "label": "National baby names ZIP",
+          "url": "https://www.ssa.gov/oact/babynames/names.zip",
+          "format": "ZIP of CSV-like text"
+        },
+        {
+          "label": "State baby names ZIP",
+          "url": "https://www.ssa.gov/oact/babynames/state/namesbystate.zip",
+          "format": "ZIP of CSV-like text"
+        }
+      ],
+      "strict_validation": "Added after May 2026 direct-route validation: no login or API key; direct data link returned data or source endpoint was browser-verified. Large files were not fully downloaded."
+    },
+    {
+      "id": "tate-collection",
+      "title": "Tate Collection Metadata",
+      "category": "arts-archives",
+      "description": "Metadata for Tate artists and artworks.",
+      "story_ideas": [
+        "Acquisition timelines",
+        "Medium/material networks",
+        "Representation in collections"
+      ],
+      "source": "https://github.com/tategallery/collection",
+      "links": [
+        {
+          "label": "Tate collection GitHub",
+          "url": "https://github.com/tategallery/collection"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "JSON-like metadata files"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Tate artists CSV (CSV).",
+      "size": "Small; roughly 70k artworks and 3.5k artists.",
+      "license": "Repo terms; images not included.",
+      "validation": "Reachable but archival.",
+      "caveats": "No longer actively maintained; last updated October 2014.",
+      "download_links": [
+        {
+          "label": "Tate artists CSV",
+          "url": "https://raw.githubusercontent.com/tategallery/collection/master/artist_data.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Tate artworks CSV",
+          "url": "https://raw.githubusercontent.com/tategallery/collection/master/artwork_data.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "bob-ross",
+      "title": "Bob Ross Paintings Elements",
+      "category": "culture-leisure",
+      "description": "Binary features for elements appearing in each painting from The Joy of Painting.",
+      "story_ideas": [
+        "Element frequency",
+        "Painting clusters",
+        "Playful categorical heatmaps"
+      ],
+      "source": "https://github.com/fivethirtyeight/data/tree/master/bob-ross",
+      "links": [
+        {
+          "label": "FiveThirtyEight Bob Ross",
+          "url": "https://github.com/fivethirtyeight/data/tree/master/bob-ross"
+        },
+        {
+          "label": "DataHub mirror",
+          "url": "https://datahub.io/fivethirtyeight/bob-ross"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "README",
+        "datapackage JSON"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Elements by episode CSV (CSV).",
+      "size": "Tiny; around 64KB.",
+      "license": "FiveThirtyEight repo terms.",
+      "validation": "Reachable.",
+      "caveats": "Static story dataset; feature coding is hand-curated/binary.",
+      "download_links": [
+        {
+          "label": "Elements by episode CSV",
+          "url": "https://raw.githubusercontent.com/fivethirtyeight/data/master/bob-ross/elements-by-episode.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "eurovision",
+      "title": "Eurovision Song Contest Data",
+      "category": "culture-leisure",
+      "description": "Historical Eurovision voting/preference data suitable for network and ranking analysis.",
+      "story_ideas": [
+        "Voting blocs",
+        "Neighbour effects",
+        "Contest-year ranking networks"
+      ],
+      "source": "https://preflib.github.io/PrefLib-Jekyll/dataset/00064",
+      "links": [
+        {
+          "label": "PrefLib Eurovision dataset",
+          "url": "https://preflib.github.io/PrefLib-Jekyll/dataset/00064"
+        },
+        {
+          "label": "Alternative GitHub dataset",
+          "url": "https://github.com/Spijkervet/eurovision-dataset"
+        }
+      ],
+      "formats": [
+        "PrefLib .soi",
+        "ZIP",
+        "CSV-like alternatives"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Contestants CSV (CSV).",
+      "size": "Tiny for PrefLib; alternative GitHub also manageable.",
+      "license": "PrefLib/source terms.",
+      "validation": "Original Spittal link was stale; switched to reachable current sources.",
+      "caveats": "PrefLib is votes/preference-oriented, not a full audio/lyrics catalogue.",
+      "download_links": [
+        {
+          "label": "Contestants CSV",
+          "url": "https://github.com/Spijkervet/eurovision-dataset/releases/download/2023/contestants.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Votes CSV",
+          "url": "https://github.com/Spijkervet/eurovision-dataset/releases/download/2023/votes.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "pudding-film-dialogue",
+      "title": "Film Dialogue by Gender",
+      "category": "culture-leisure",
+      "description": "Character and film metadata for dialogue share by gender and age across 2,000 screenplays.",
+      "story_ideas": [
+        "Representation trends",
+        "Genre and age comparison",
+        "Speaking-time imbalance charts"
+      ],
+      "source": "https://pudding.cool/2017/03/film-dialogue/",
+      "links": [
+        {
+          "label": "The Pudding story",
+          "url": "https://pudding.cool/2017/03/film-dialogue/"
+        },
+        {
+          "label": "Data/code references",
+          "url": "https://github.com/matthewfdaniels/scripts"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Character list CSV (CSV).",
+      "size": "Very manageable; around tens of thousands of character rows.",
+      "license": "Check source repo/story terms.",
+      "validation": "Sub-agent found reachable story/data references after original GitHub path failed.",
+      "caveats": "Gender/age inferred from actor/IMDb metadata and treated binarily; screenplay dialogue differs from final films.",
+      "download_links": [
+        {
+          "label": "Character list CSV",
+          "url": "https://raw.githubusercontent.com/matthewfdaniels/scripts/graphs/character_list5.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Film metadata CSV",
+          "url": "https://raw.githubusercontent.com/matthewfdaniels/scripts/graphs/meta_data7.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "shark-attack-file",
+      "title": "Global Shark Attack File",
+      "category": "culture-leisure",
+      "description": "Incident log of documented shark attacks with location, activity, injury and species context.",
+      "story_ideas": [
+        "Risk maps",
+        "Activity categories",
+        "Historical incident timelines"
+      ],
+      "source": "https://sharkattackfile.net/incidentlog.htm",
+      "links": [
+        {
+          "label": "GSAF incident log",
+          "url": "https://sharkattackfile.net/incidentlog.htm"
+        }
+      ],
+      "formats": [
+        "Excel .xls",
+        "PDFs"
+      ],
+      "access": "Use the protected download links in this catalogue; start with GSAF incident log XLS (XLS).",
+      "size": "Small and manageable.",
+      "license": "GSAF copyright/terms.",
+      "validation": "Reachable/current.",
+      "caveats": "Copyright notice and category coding; serious researchers directed to join GSAF for more data.",
+      "download_links": [
+        {
+          "label": "GSAF incident log XLS",
+          "url": "https://sharkattackfile.net/spreadsheets/GSAF5.xls",
+          "format": "XLS"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "hip-hop-vocab",
+      "title": "Hip Hop Vocabulary",
+      "category": "culture-leisure",
+      "description": "Vocabulary counts for hip-hop artists, popularised by The Pudding/Matt Daniels analysis.",
+      "story_ideas": [
+        "Linguistic diversity rankings",
+        "Artist comparison",
+        "Vocabulary vs era"
+      ],
+      "source": "https://github.com/the-pudding/data",
+      "links": [
+        {
+          "label": "The Pudding data repo",
+          "url": "https://github.com/the-pudding/data"
+        },
+        {
+          "label": "Story",
+          "url": "https://pudding.cool/projects/vocabulary/index.html"
+        }
+      ],
+      "formats": [
+        "Public Google Sheet/CSV-export style"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Hip-hop vocabulary CSV export (CSV).",
+      "size": "Small.",
+      "license": "The Pudding/Matt Daniels source terms.",
+      "validation": "Original path was stale; repo index and linked data route reachable.",
+      "caveats": "Methodology/story-specific counts; Google Sheet dependency.",
+      "download_links": [
+        {
+          "label": "Hip-hop vocabulary CSV export",
+          "url": "https://docs.google.com/spreadsheets/d/1HIIfgDpNMM-j0hoQHN-yP5P1lNOfJuvym0u0sdWwD9g/export?format=csv&gid=737896402",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "michelin-restaurants",
+      "title": "Michelin Star Restaurants Worldwide",
+      "category": "culture-leisure",
+      "description": "Curated/scraped Michelin Guide restaurant metadata with stars, geography and cuisine.",
+      "story_ideas": [
+        "Fine-dining geography",
+        "Cuisine by star level",
+        "Price-tier comparison"
+      ],
+      "source": "https://github.com/ngshiheng/michelin-my-maps",
+      "links": [
+        {
+          "label": "Michelin My Maps GitHub data",
+          "url": "https://github.com/ngshiheng/michelin-my-maps"
+        }
+      ],
+      "formats": [
+        "CSV/archive"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Michelin restaurants CSV (CSV).",
+      "size": "Small; a few MB.",
+      "license": "Public GitHub repository terms; check Michelin source terms before redistribution.",
+      "validation": "Kept via direct GitHub raw CSV reachable without login or API key.",
+      "caveats": "Curated from Michelin Guide data; freshness depends on the repository maintainer.",
+      "download_links": [
+        {
+          "label": "Michelin restaurants CSV",
+          "url": "https://raw.githubusercontent.com/ngshiheng/michelin-my-maps/main/data/michelin_my_maps.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "rebrickable",
+      "title": "Rebrickable Lego Sets Database",
+      "category": "culture-leisure",
+      "description": "Relational catalogue of Lego sets, inventories, parts, themes and colours.",
+      "story_ideas": [
+        "Colour palette evolution",
+        "Parts per set over time",
+        "Theme networks"
+      ],
+      "source": "https://rebrickable.com/downloads/",
+      "links": [
+        {
+          "label": "Rebrickable downloads",
+          "url": "https://rebrickable.com/downloads/"
+        },
+        {
+          "label": "Rebrickable API docs",
+          "url": "https://rebrickable.com/api/"
+        }
+      ],
+      "formats": [
+        "CSV dumps",
+        "JSON API"
+      ],
+      "access": "Use the protected download links in this catalogue; start with LEGO sets CSV.GZ (CSV.GZ).",
+      "size": "Manageable relational catalogue.",
+      "license": "Rebrickable terms.",
+      "validation": "Reachable/current docs; downloads may be protected.",
+      "caveats": "API key/account needed for API; crowdsourced data.",
+      "download_links": [
+        {
+          "label": "LEGO sets CSV.GZ",
+          "url": "https://cdn.rebrickable.com/media/downloads/sets.csv.gz",
+          "format": "CSV.GZ"
+        },
+        {
+          "label": "LEGO parts CSV.GZ",
+          "url": "https://cdn.rebrickable.com/media/downloads/parts.csv.gz",
+          "format": "CSV.GZ"
+        },
+        {
+          "label": "LEGO themes CSV.GZ",
+          "url": "https://cdn.rebrickable.com/media/downloads/themes.csv.gz",
+          "format": "CSV.GZ"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "spotify-tracks",
+      "title": "Spotify Tracks Audio Features",
+      "category": "culture-leisure",
+      "description": "Track-level Spotify-style audio features such as danceability, energy, acousticness, tempo and genre.",
+      "story_ideas": [
+        "Genre clustering",
+        "Radar charts",
+        "What makes a song sad?"
+      ],
+      "source": "https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset",
+      "links": [
+        {
+          "label": "Hugging Face Spotify tracks dataset",
+          "url": "https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Spotify tracks CSV (CSV).",
+      "size": "Small; around tens of MB.",
+      "license": "Dataset mirror terms; check Spotify API/source terms before redistribution.",
+      "validation": "Kept via direct Hugging Face CSV resolve link reachable without login or API key.",
+      "caveats": "Audio features and popularity values are a stale snapshot; source terms matter.",
+      "download_links": [
+        {
+          "label": "Spotify tracks CSV",
+          "url": "https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset/resolve/main/dataset.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "pudding-pockets",
+      "title": "The Pudding: Women's Pocket Sizes",
+      "category": "culture-leisure",
+      "description": "Measurements of front and back pockets in men's and women's jeans across brands.",
+      "story_ideas": [
+        "Everyday inequality charts",
+        "Brand and style comparison",
+        "Object-fit diagrams"
+      ],
+      "source": "https://github.com/the-pudding/data/tree/master/pockets",
+      "links": [
+        {
+          "label": "Pockets data folder",
+          "url": "https://github.com/the-pudding/data/tree/master/pockets"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "PNG diagram"
+      ],
+      "access": "Use the protected download links in this catalogue; start with Pocket measurements CSV (CSV).",
+      "size": "Tiny; 80 pairs of jeans.",
+      "license": "MIT repository licence.",
+      "validation": "Original owner link stale; corrected GitHub folder reachable.",
+      "caveats": "One-off measured sample, not a representative garment census.",
+      "download_links": [
+        {
+          "label": "Pocket measurements CSV",
+          "url": "https://raw.githubusercontent.com/the-pudding/data/master/pockets/measurements.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "Measurement rectangles JSON",
+          "url": "https://raw.githubusercontent.com/the-pudding/data/master/pockets/measurementRectangles.json",
+          "format": "JSON"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "ufo-sightings",
+      "title": "UFO Sightings Database",
+      "category": "culture-leisure",
+      "description": "NUFORC-reported sightings with dates, locations, durations, shapes and descriptions.",
+      "story_ideas": [
+        "Sightings heatmaps",
+        "Shape categories",
+        "Text and sentiment exploration"
+      ],
+      "source": "https://github.com/DataHerb/nuforc-ufo-records",
+      "links": [
+        {
+          "label": "DataHerb NUFORC records",
+          "url": "https://github.com/DataHerb/nuforc-ufo-records"
+        }
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "access": "Use the protected download links in this catalogue; start with NUFORC UFO records CSV (CSV).",
+      "size": "Manageable; roughly tens of MB.",
+      "license": "Public mirror of NUFORC-style reports; verify source terms before redistribution.",
+      "validation": "Kept via direct CSV mirrors reachable without login or API key.",
+      "caveats": "Self-reported and geocoded data; expect missing, duplicated and erroneous fields.",
+      "download_links": [
+        {
+          "label": "NUFORC UFO records CSV",
+          "url": "https://raw.githubusercontent.com/DataHerb/nuforc-ufo-records/master/dataset/nuforc_ufo_records.csv",
+          "format": "CSV"
+        },
+        {
+          "label": "NUFORC flat CSV",
+          "url": "https://huggingface.co/datasets/kjsorenson/NUFORC/resolve/main/nuforc_flat.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    },
+    {
+      "id": "wine-reviews",
+      "title": "Wine Enthusiast Reviews",
+      "category": "culture-leisure",
+      "description": "Wine reviews with points, price, variety, country and descriptive text.",
+      "story_ideas": [
+        "Value-for-money wines",
+        "Review-language analysis",
+        "Country and grape variety maps"
+      ],
+      "source": "https://github.com/rajacsp/public-dataset/tree/master/zynicide-wine-reviews",
+      "links": [
+        {
+          "label": "Public GitHub WineMag CSV mirror",
+          "url": "https://github.com/rajacsp/public-dataset/tree/master/zynicide-wine-reviews"
+        }
+      ],
+      "formats": [
+        "CSV",
+        "JSON variants"
+      ],
+      "access": "Use the protected download links in this catalogue; start with WineMag 130k v2 CSV (CSV).",
+      "size": "Small; around 130k reviews in v2.",
+      "license": "Scraped Wine Enthusiast snapshot; verify source terms before redistribution.",
+      "validation": "Kept via direct GitHub raw CSV mirror reachable without login or API key.",
+      "caveats": "Scraped 2017-era review snapshot; not current market coverage.",
+      "download_links": [
+        {
+          "label": "WineMag 130k v2 CSV",
+          "url": "https://raw.githubusercontent.com/rajacsp/public-dataset/master/zynicide-wine-reviews/winemag-data-130k-v2.csv",
+          "format": "CSV"
+        }
+      ],
+      "strict_validation": "Kept after strict open-download validation: no login, no API key, direct standard-format download or unauthenticated endpoint."
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>100 Datasets</title>
+    <meta name="description" content="A compact catalogue of 100 openly downloadable datasets for data exploration projects and AI-agent handoff.">
+    <link rel="canonical" href="https://petergpt.github.io/100-datasets/">
+    <link rel="alternate" type="application/json" href="datasets.json" title="100 Datasets manifest">
+    <meta property="og:title" content="100 Datasets">
+    <meta property="og:description" content="Openly downloadable datasets with direct data links, access notes and copyable AI-agent prompts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://petergpt.github.io/100-datasets/">
+    <meta property="og:image" content="https://petergpt.github.io/100-datasets/assets/screenshot.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar" aria-label="Catalogue header">
+      <a class="brand" href="#top" aria-label="100 Datasets home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>100 Datasets</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="controls" aria-label="Dataset filters">
+        <label class="search-field">
+          <span>Search datasets</span>
+          <input id="search" type="search" autocomplete="off" placeholder="Try crime, climate, transport, CSV...">
+        </label>
+        <label class="select-field">
+          <span>Category</span>
+          <select id="category-filter">
+            <option value="all">All categories</option>
+          </select>
+        </label>
+        <button class="ghost-action" id="reset-filters" type="button">Reset filters</button>
+      </section>
+
+      <section class="category-strip" aria-label="Categories">
+        <div id="category-rail"></div>
+      </section>
+
+      <section class="dataset-area" id="catalogue" aria-live="polite" aria-busy="false">
+        <div class="result-line">
+          <p id="result-count">Loading datasets...</p>
+        </div>
+        <div id="dataset-groups"></div>
+        <p class="empty-state" id="empty-state" hidden>No datasets match those filters.</p>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <dialog class="prompt-dialog" id="prompt-dialog" aria-labelledby="prompt-dialog-title">
+      <form method="dialog">
+        <div class="dialog-heading">
+          <h2 id="prompt-dialog-title">Agent prompt</h2>
+          <button class="ghost-action" value="close" type="submit">Close</button>
+        </div>
+        <p id="prompt-dialog-note">Copy is restricted in this browser context. The text is selected below.</p>
+        <textarea id="prompt-fallback" readonly></textarea>
+      </form>
+    </dialog>
+
+    <template id="dataset-template">
+      <article class="dataset-card">
+        <div class="card-main">
+          <div class="card-kicker">
+            <span class="dataset-number"></span>
+            <p class="card-category"></p>
+          </div>
+          <div class="card-heading">
+            <h3></h3>
+          </div>
+          <p class="description"></p>
+          <dl class="metadata">
+            <div>
+              <dt>Formats</dt>
+              <dd class="formats"></dd>
+            </div>
+            <div>
+              <dt>Size</dt>
+              <dd class="size"></dd>
+            </div>
+            <div>
+              <dt>Best route</dt>
+              <dd class="access"></dd>
+            </div>
+          </dl>
+          <details>
+            <summary>Notes</summary>
+            <p class="caveats"></p>
+          </details>
+          <div class="story-ideas"></div>
+        </div>
+        <div class="card-actions">
+          <a class="source-link" target="_blank" rel="noopener">Open link</a>
+          <button class="copy-links-action" type="button">Data link</button>
+          <button class="copy-action" type="button">Prompt</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="datasets.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

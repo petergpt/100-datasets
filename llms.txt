@@ -1,0 +1,37 @@
+# 100 Datasets
+
+Public catalogue: https://petergpt.github.io/100-datasets/
+
+Machine-readable manifest: https://petergpt.github.io/100-datasets/datasets.json
+
+Repository: https://github.com/petergpt/100-datasets
+
+Purpose: a curated catalogue of 100 openly downloadable datasets for student data exploration projects and AI-agent handoff.
+
+Recommended agent workflow:
+1. Fetch `datasets.json` before scraping or reading the HTML.
+2. Select a dataset by `id`, `title`, `category`, `formats`, `description`, or `story_ideas`.
+3. Use the dataset object's `download_links` array for the actual data file or unauthenticated API route.
+4. Preserve the source URL, licence or terms note, validation note, and caveats in any downstream analysis.
+5. Fetch a manageable subset first when an API route is parameterised or a ZIP is large.
+
+Dataset object fields:
+- `id`: stable slug, also used as the page anchor.
+- `title`: dataset name.
+- `category`: one of the catalogue category ids.
+- `description`: short human-readable summary.
+- `source`: main source or documentation URL.
+- `links`: useful source, documentation, or landing-page URLs.
+- `download_links`: copyable direct data URLs or unauthenticated API endpoints.
+- `formats`: expected formats.
+- `size`: size and manageability note.
+- `license`: source terms or licence summary.
+- `access`: practical access instructions.
+- `validation`: validation note from the catalogue build.
+- `caveats`: interpretation, coverage, bias, or quality notes.
+- `story_ideas`: possible exploration angles.
+
+Notes:
+- Direct data links are copy-only in the visual UI to avoid accidental downloads.
+- The HTML advertises the manifest with `<link rel="alternate" type="application/json" href="datasets.json">`.
+- Individual dataset cards can be opened by hash anchor using the dataset id, for example `/#census-2021-bulk`.
