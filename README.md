@@ -29,27 +29,27 @@ Each dataset card gives you:
 
 The **Data link** button copies the URL instead of opening it directly. That is deliberate: some data files are large enough that accidental clicks would be annoying.
 
-## Copy This Prompt For An AI Agent
+## Give This To Your Coding Agent
 
-If you are using ChatGPT, Codex, Claude, Gemini, or another AI coding/data agent, you can start with this:
+Copy this prompt into your coding agent:
 
 ```text
-I want to choose a dataset for a student data exploration project.
+Help me find a dataset for a student data exploration project.
 
 Please use this catalogue: https://petergpt.github.io/100-datasets/
 
 First read the machine-readable manifest here:
 https://petergpt.github.io/100-datasets/datasets.json
 
-Help me choose 3 suitable datasets for the topic I give you. For each one, explain:
-- what story or question I could explore
-- what format the data is in
-- roughly how large or manageable it is
-- what caveats I should keep in mind
-
-After I choose one dataset, use its download_links field to fetch the data. Start with a manageable subset if the dataset is large or API-based. Then summarise the rows, columns, coverage, missing values, and 3 possible visualisations or analyses.
-
 My topic or interest is: [replace this with your topic]
+
+Help me choose a dataset from the catalogue. Suggest a few good options first, then recommend one. Explain what each dataset contains, what story or question I could explore, what format it is in, how manageable it is, and what caveats I should keep in mind.
+
+After I choose one dataset, use its download_links field to fetch the data. Start with a manageable subset if the dataset is large or API-based. Then help me explore and understand it.
+
+Please create a standalone HTML page that uses the dataset and presents 20 different visualisations or exploratory views. Make the visualisations creative and varied: include different chart types, maps if the data supports them, timelines, rankings, distributions, comparisons, clusters, small multiples, annotations, and surprising angles. The page should help me understand the dataset, not just display it.
+
+Before building the page, summarise the rows, columns, coverage, missing values, source, licence notes, and caveats.
 ```
 
 If you already know which dataset you want, open its card in the catalogue and use the card’s **Prompt** button instead. That gives your agent dataset-specific links, notes, and access instructions.
