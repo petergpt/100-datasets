@@ -1,43 +1,74 @@
 # 100 Datasets
 
-[Open the catalogue](https://petergpt.github.io/100-datasets/) · [Machine-readable manifest](https://petergpt.github.io/100-datasets/datasets.json)
+Start here: [open the live HTML catalogue](https://petergpt.github.io/100-datasets/).
 
-A compact catalogue of 100 openly downloadable datasets for data exploration projects. Each entry has a source link, protected direct data links, access notes, format and size guidance, caveats, story ideas, and a copyable prompt for AI agents.
+This is a browsable collection of 100 datasets that are good for student data exploration projects. The datasets were chosen because they are openly accessible, downloadable without an account, and available in formats that ordinary tools and AI agents can handle.
 
-![100 Datasets screenshot](assets/screenshot.png)
+![Screenshot of the 100 Datasets catalogue](assets/screenshot.png)
 
-## What It Is
+## What This Is For
 
-This is a static HTML catalogue for students, teachers, analysts, and AI agents who need a dataset that can be fetched without a login, API key, account gate, or custom tooling.
+Use this when you need a dataset for an analysis, visualisation, mapping project, statistics exercise, or exploratory notebook, but you do not want to spend hours fighting broken links, login walls, API keys, or giant archives.
 
-The catalogue is intentionally selective. Every included dataset has either a direct file URL or an unauthenticated API route in a standard format such as CSV, JSON, GeoJSON, XLSX, GTFS, or a ZIP of readable files. Most entries are small or subsettable enough for a one-off exploration task.
+Each dataset card gives you:
 
-## How To Use It
+- a short explanation of what the data contains
+- the expected file format and size
+- a source page you can open in a browser
+- a protected **Data link** button that copies the direct download URL
+- a **Prompt** button that copies instructions for an AI agent
+- caveats and story ideas to help you analyse the data responsibly
 
-Open the hosted page, search by topic or format, choose a category, and use the card buttons:
+## How To Find A Dataset
 
-- **Open** opens the source or documentation page.
-- **Data link** copies the direct download URL or endpoint.
-- **Prompt** copies a dataset-specific instruction block for an AI agent.
+1. Open the [live HTML catalogue](https://petergpt.github.io/100-datasets/).
+2. Search for a topic, place, format, or keyword, such as `crime`, `weather`, `CSV`, `transport`, `health`, or `maps`.
+3. Use the category buttons to browse broad areas like **People**, **Transit**, **Safety**, **Hazards**, **Health**, **Archives**, or **Culture**.
+4. Pick a card that looks interesting and check the format, size, access notes, and caveats.
+5. Click **Data link** to copy the actual download URL, or click **Prompt** to copy a ready-made instruction for an AI agent.
 
-Direct data links are copy-only in the UI so people do not accidentally download large files by clicking around.
+The **Data link** button copies the URL instead of opening it directly. That is deliberate: some data files are large enough that accidental clicks would be annoying.
 
-## For Agents
+## Copy This Prompt For An AI Agent
 
-The canonical source of catalogue data is [`datasets.json`](datasets.json). It contains:
+If you are using ChatGPT, Codex, Claude, Gemini, or another AI coding/data agent, you can start with this:
 
-- `categories`: short, human-readable groups.
-- `datasets`: one object per dataset, with `download_links`, `formats`, `size`, `license`, `access`, `validation`, `caveats`, and `story_ideas`.
+```text
+I want to choose a dataset for a student data exploration project.
 
-Agents should read `datasets.json` first, then use `download_links` for the actual fetch. The HTML also advertises the manifest through:
+Please use this catalogue: https://petergpt.github.io/100-datasets/
 
-```html
-<link rel="alternate" type="application/json" href="datasets.json" title="100 Datasets manifest">
+First read the machine-readable manifest here:
+https://petergpt.github.io/100-datasets/datasets.json
+
+Help me choose 3 suitable datasets for the topic I give you. For each one, explain:
+- what story or question I could explore
+- what format the data is in
+- roughly how large or manageable it is
+- what caveats I should keep in mind
+
+After I choose one dataset, use its download_links field to fetch the data. Start with a manageable subset if the dataset is large or API-based. Then summarise the rows, columns, coverage, missing values, and 3 possible visualisations or analyses.
+
+My topic or interest is: [replace this with your topic]
 ```
 
-There is also an [`llms.txt`](llms.txt) file with a concise agent-facing route map.
+If you already know which dataset you want, open its card in the catalogue and use the card’s **Prompt** button instead. That gives your agent dataset-specific links, notes, and access instructions.
+
+## What Counts As “Good” Here
+
+The catalogue favours datasets that are:
+
+- openly downloadable or queryable without login or API keys
+- in familiar formats such as CSV, JSON, GeoJSON, XLSX, GTFS, or shapefile ZIPs
+- small enough, or subsettable enough, for a normal project
+- rich enough to support a real question, chart, map, timeline, ranking, or comparison
+- documented well enough that you can understand the source and limitations
+
+The datasets themselves still belong to their original publishers. Always keep the source, licence notes, and caveats with your analysis.
 
 ## Categories
+
+The 100 datasets are grouped into 12 short categories:
 
 | Category | Count |
 | --- | ---: |
@@ -54,25 +85,20 @@ There is also an [`llms.txt`](llms.txt) file with a concise agent-facing route m
 | Arts & Archives | 9 |
 | Culture & Leisure | 11 |
 
-## Local Preview
+## For Agents And Advanced Users
 
-This is a dependency-free static site. Any local static server will work:
+The easiest machine-readable route is:
 
-```bash
-python3 -m http.server 8899
-```
+[https://petergpt.github.io/100-datasets/datasets.json](https://petergpt.github.io/100-datasets/datasets.json)
 
-Then open `http://127.0.0.1:8899/`.
+Each dataset has a stable `id`, and each card can be opened directly with a URL fragment. For example:
 
-## Files
+[https://petergpt.github.io/100-datasets/#census-2021-bulk](https://petergpt.github.io/100-datasets/#census-2021-bulk)
 
-- [`index.html`](index.html): static catalogue shell.
-- [`datasets.json`](datasets.json): source manifest for humans and agents.
-- [`datasets.js`](datasets.js): browser-loaded mirror of the manifest.
-- [`app.js`](app.js): filtering, rendering, copy prompts, and deep links.
-- [`styles.css`](styles.css): compact responsive catalogue styling.
-- [`DATASET_SELECTION_SPEC.md`](DATASET_SELECTION_SPEC.md): selection rules and current inventory.
+There is also a short agent route map at:
+
+[https://petergpt.github.io/100-datasets/llms.txt](https://petergpt.github.io/100-datasets/llms.txt)
 
 ## Licence
 
-The catalogue code and metadata in this repository are released under the MIT License. The datasets themselves are owned and licensed by their original publishers; each catalogue entry includes source and terms notes where available.
+The catalogue code and metadata in this repository are released under the MIT License. The datasets themselves are owned and licensed by their original publishers.
